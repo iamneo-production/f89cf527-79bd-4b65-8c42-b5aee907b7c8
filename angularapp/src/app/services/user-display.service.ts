@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class UserDisplayService {
 
-  url="http://localhost:3000/users";
+  url="https://8080-dadadbcdabbdffbedeadcfdbdaabaca.examlyiopb.examly.io/users";
   constructor(private ht:HttpClient) { }
 
   users()

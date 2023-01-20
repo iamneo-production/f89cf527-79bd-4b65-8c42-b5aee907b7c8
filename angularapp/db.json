@@ -1,1 +1,36 @@
-{}
+{
+    "posts": [
+        {
+          "id": 1,
+          "title": "json-server",
+          "author": "typicode"
+        }
+      ],
+      "users":[
+        {
+            "id":1,
+            "username":"admin",
+            "email":"tshabalala.nicolas@gmail",
+            "mobilenumber":"0715501164",
+            "password":"admin"
+        },
+        {
+            "id":2,
+            "username":"chavinco",
+            "email":"tshabalala.nicolas@gmail",
+            "mobilenumber":"0715501164",
+            "password":"myPass123"
+        }
+    ],
+      "comments": [
+        {
+          "id": 1,
+          "body": "some comment",
+          "postId": 1
+        }
+      ],
+      "profile": {
+        "name": "typicode"
+      }
+    
+}
