@@ -1,2 +1,48 @@
-<app-display-user></app-display-user>
-<app-login></app-login>
+<mat-toolbar *ngIf="!isAdmin" class="navbar">
+  <button mat-button routerLink="">
+      <h2>Lens Mart</h2>
+  </button>
+  <span class="example-spacer"></span>
+  <button mat-button id="homepage" routerLink="">Home</button>
+  <button mat-button id="cart" routerLink="">Cart</button>
+  <button mat-button id="orders" routerLink="">Orders</button>
+  <span class="example-spacer"></span>
+  <button *ngIf="!loggedIn" id="login" routerLink="login" mat-raised-button color="primary"
+      class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <span>Login</span>
+  </button>
+  <button *ngIf="loggedIn" id="logout" mat-raised-button color="accent" class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon" (click)="logOut()">
+      <span>Logout</span>
+  </button>
+  <button *ngIf="!loggedIn" id="signup" routerLink="sign-up" mat-button class="example-icon"
+      aria-label="Example icon-button with share icon">
+      <span>Sign up</span>
+  </button>
+</mat-toolbar>
+
+<mat-toolbar *ngIf="isAdmin" class="navbar">
+  <button mat-button routerLink="">
+      <h2>Lens Mart</h2>
+  </button>
+  <span class="example-spacer"></span>
+  <button mat-button id="addProduct" routerLink="">Products</button>
+  <button mat-button id="viewOrders" routerLink="">Orders</button>
+  <button mat-button id="userDisplay" routerLink="">User Management</button>
+  <span class="example-spacer"></span>
+  <button id="login" *ngIf="!loggedIn" routerLink="login" mat-raised-button color="primary"
+      class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <span>Login</span>
+  </button>
+  <button id="signup" *ngIf="!loggedIn" routerLink="sign-up" mat-button class="example-icon"
+      aria-label="Example icon-button with share icon">
+      <span>Sign up</span>
+  </button>
+  <button *ngIf="loggedIn" id="logout" mat-raised-button color="accent" class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon" (click)="logOut()">
+      <span>Logout</span>
+  </button>
+</mat-toolbar>
+<main>
+    <router-outlet></router-outlet>
+</main>
