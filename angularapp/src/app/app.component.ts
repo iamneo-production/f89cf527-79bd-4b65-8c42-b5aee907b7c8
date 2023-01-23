@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularapp';
+  isAdmin:boolean = false;
+  loggedIn:boolean = false;
+
+  constructor(private router:Router){
+
+    let s = localStorage.getItem('loggedUser');
+    if(s != null){
+      this.isAdmin = JSON.parse(s).role == "admin" ? true : false;
+      this.loggedIn = true;
+    }
+     
+    console.log(s);
+    
+    //this.isAdmin = 
+  }
+  
+
+  logOut(){
+    localStorage.clear()
+    this.router.navigate(['login'])
+  }
 }

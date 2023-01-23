@@ -10,7 +10,14 @@ import { LoginService } from '../services/login/login.service';
 })
 export class LoginComponent implements OnInit {
 
+  loggedUser:any;
+
   constructor(private loginService: LoginService, private router: Router) { }
+  
+  ngOnInit(): void {
+   console.log("OnInit");
+   
+  }
 
 
   loginForm = new FormGroup(
@@ -30,24 +37,28 @@ export class LoginComponent implements OnInit {
 
   loginUser(loginForm: any) {
 
-    const formEmail = loginForm.value.email;
-    const formPassword = loginForm.value.password;
+    this.loginForm.value ?
+    this.loginService.login(this.loginForm.value.username, this.loginForm.value.password)
+      .subscribe(
+        (next: any) => {
+          this.loggedUser = next[0];
 
-    this.loginService.getUsers().subscribe(
-      (dbusers: any) => {
-        const user = dbusers.find((u: any) => (u.email == formEmail && u.password == formPassword))
+          if (this.loggedUser != undefined) {
+            localStorage.setItem('loggedUser', JSON.stringify(this.loggedUser));
+            let user: any = localStorage.getItem('loggedUser');
+            console.log(JSON.parse(user));
+            this.router.navigate(['/'])
+          } else {
+            alert('Login Failed')
+          }
+         
 
-        if (user) {
-          alert("logged in")
-          this.router.navigate(['dashboard'])
-        } else {
-          alert("Login failed")
         }
-      }
-    )
+      ) :
+    alert("Invalid login form")
   }
 
-  ngOnInit(): void {
-  }
-
+  
 }
+
+
