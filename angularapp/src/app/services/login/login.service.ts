@@ -6,11 +6,16 @@ import { HttpClient } from "@angular/common/http";
 })
 export class LoginService {
 
+  users:any;
   url:string = "https://8080-cafcfccaceabeffbedeadcfdbdaabaca.examlyiopb.examly.io/users"
 
   constructor(private http:HttpClient){}
 
   getUsers() {
     return this.http.get(this.url);
+  }
+  addUser(data:any)
+  {
+      return this.http.post(this.url,data);
   }
 }
