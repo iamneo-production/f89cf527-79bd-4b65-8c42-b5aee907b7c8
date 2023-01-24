@@ -5,7 +5,7 @@
   <span class="example-spacer"></span>
   <button mat-button id="homepage" routerLink="home">Home</button>
   <button mat-button id="cart" routerLink="">Cart</button>
-  <button mat-button id="orders" routerLink="">Orders</button>
+  <button mat-button id="orders" routerLink="orders">Orders</button>
   <span class="example-spacer"></span>
   <button *ngIf="!loggedIn" id="login" routerLink="login" mat-raised-button color="primary"
       class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
@@ -27,7 +27,7 @@
   </button>
   <span class="example-spacer"></span>
   <button mat-button id="addProduct" routerLink="">Products</button>
-  <button mat-button id="viewOrders" routerLink="">Orders</button>
+  <button mat-button id="viewOrders" routerLink="orders">Orders</button>
   <button mat-button id="userDisplay" routerLink="">User Management</button>
   <span class="example-spacer"></span>
   <button id="login" *ngIf="!loggedIn" routerLink="login" mat-raised-button color="primary"

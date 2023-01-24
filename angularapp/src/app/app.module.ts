@@ -20,6 +20,9 @@ import { SearchComponent } from './search/search.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { AddOrderComponent } from './add-order/add-order.component';
+import { DeleteOrderComponent } from './delete-order/delete-order.component';
+import { ViewOrderComponent } from './view-order/view-order.component';
 
 
 @NgModule({
@@ -30,7 +33,10 @@ import { HomepageComponent } from './homepage/homepage.component';
     DisplayUserComponent,
     SignupComponent,
     ViewProductComponent,
-    HomepageComponent
+    HomepageComponent,
+    AddOrderComponent,
+    ViewOrderComponent,
+    DeleteOrderComponent
   ],
   imports: [
     BrowserModule,
