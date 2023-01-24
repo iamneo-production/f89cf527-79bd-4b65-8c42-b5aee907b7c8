@@ -1,0 +1,37 @@
+
+ <div class="form-center">
+
+
+    <div class="container">
+        <div class="row">
+         
+          <div class="search-hero">
+              <h1>User Account Information</h1>
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Enter Value To Search">
+          
+<table>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>Operations</th>
+    </tr>
+    <strong></strong>
+    <tr *ngFor="let u of users | filter:searchText">
+      <td>{{u.username}}</td>
+      <td>{{u.email}}</td>
+      <td>{{u.mobilenumber}}</td>
+      <button>Edit</button>
+      <button>Delete</button>
+    </tr>
+  </table>
+</div>
+</div>
+</div>
+ 
+
+
+ 
+
+  
+  

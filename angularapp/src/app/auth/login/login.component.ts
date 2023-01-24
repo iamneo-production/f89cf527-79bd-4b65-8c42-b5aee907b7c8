@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from '../services/login/login.service';
+import { LoginService } from '../../services/login/login.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,14 @@ import { LoginService } from '../services/login/login.service';
 })
 export class LoginComponent implements OnInit {
 
+  loggedUser:any;
+
   constructor(private loginService: LoginService, private router: Router) { }
+  
+  ngOnInit(): void {
+   console.log("OnInit");
+   
+  }
 
 
   loginForm = new FormGroup(
@@ -30,24 +37,32 @@ export class LoginComponent implements OnInit {
 
   loginUser(loginForm: any) {
 
-    const formEmail = loginForm.value.email;
-    const formPassword = loginForm.value.password;
 
-    this.loginService.getUsers().subscribe(
-      (dbusers: any) => {
-        const user = dbusers.find((u: any) => (u.email == formEmail && u.password == formPassword))
 
-        if (user) {
-          alert("logged in")
-          this.router.navigate(['dashboard'])
-        } else {
-          alert("Login failed")
+    this.loginService.login(this.loginForm.value.email, this.loginForm.value.password)
+      .subscribe(
+        (next: any) => {
+          this.loggedUser = next[0];
+
+          console.log(next)
+
+          if (this.loggedUser != undefined) {
+
+            localStorage.setItem('loggedUser', JSON.stringify(this.loggedUser));
+
+            let user: any = localStorage.getItem('loggedUser');
+            console.log(JSON.parse(user));
+            this.router.navigate(['']);
+
+          } else {
+            alert('Authentication failed')
+          }
         }
-      }
-    )
+      ) 
+    //alert("Invalid login form")
   }
 
-  ngOnInit(): void {
-  }
-
+  
 }
+
+
