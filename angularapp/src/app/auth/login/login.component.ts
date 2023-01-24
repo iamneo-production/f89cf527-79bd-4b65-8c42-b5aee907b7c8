@@ -37,6 +37,8 @@ export class LoginComponent implements OnInit {
 
   loginUser(loginForm: any) {
 
+
+
     this.loginService.login(this.loginForm.value.email, this.loginForm.value.password)
       .subscribe(
         (next: any) => {
@@ -51,13 +53,13 @@ export class LoginComponent implements OnInit {
             let user: any = localStorage.getItem('loggedUser');
             console.log(JSON.parse(user));
             this.router.navigate(['/'])
-
+            window.location.reload();
           } else {
             alert('Authentication failed')
           }
         }
       ) 
-    alert("Invalid login form")
+    //alert("Invalid login form")
   }
 
   

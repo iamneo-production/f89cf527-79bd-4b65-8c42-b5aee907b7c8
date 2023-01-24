@@ -27,5 +27,6 @@ export class AppComponent {
   logOut(){
     localStorage.clear()
     this.router.navigate(['login'])
+    window.location.reload();
   }
 }
