@@ -21,6 +21,7 @@ import { DisplayUserComponent } from './display-user/display-user.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { AddCartComponent } from './add-cart/add-cart.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { SignupComponent } from './auth/signup/signup.component';
     DisplayUserComponent,
     SignupComponent,
     ViewProductComponent,
-    HomepageComponent
+    HomepageComponent,
+    AddCartComponent
   ],
   imports: [
     BrowserModule,
