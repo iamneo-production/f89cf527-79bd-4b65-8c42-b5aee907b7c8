@@ -15,7 +15,7 @@ export class LoginService {
     return this.http.get(this.usersUrl);
   }
 
-  login(username: any, password: any) {
-    return this.http.get(this.usersUrl + "/?username=" + username + "&password=" + password)
+  login(email: any, password: any) {
+    return this.http.get(this.usersUrl + "/?email=" + email + "&password=" + password)
   }
 }

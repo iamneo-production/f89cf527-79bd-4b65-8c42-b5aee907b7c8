@@ -15,11 +15,12 @@
             "password":"admin"
         },
         {
-            "id":2,
-            "username":"chavinco",
-            "email":"tshabalala.nicolas@gmail",
-            "mobilenumber":"0715501164",
-            "password":"myPass123"
+          "id": 3,
+          "username": "chavinco",
+          "email": "tshabalala.nicolas@gmail",
+          "mobilenumber": "0824573500",
+          "password": "1234",
+          "role": "customer"
         }
         
     ],

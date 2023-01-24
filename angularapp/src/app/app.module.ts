@@ -17,6 +17,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { SearchComponent } from './search/search.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
 import { ViewProductComponent } from './view-product/view-product.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 
@@ -27,7 +28,8 @@ import { ViewProductComponent } from './view-product/view-product.component';
     SearchComponent,
     DisplayUserComponent,
     SignupComponent,
-    ViewProductComponent
+    ViewProductComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

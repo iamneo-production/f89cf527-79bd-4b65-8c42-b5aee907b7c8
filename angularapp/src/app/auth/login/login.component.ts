@@ -37,24 +37,26 @@ export class LoginComponent implements OnInit {
 
   loginUser(loginForm: any) {
 
-    this.loginForm.value ?
-    this.loginService.login(this.loginForm.value.username, this.loginForm.value.password)
+    this.loginService.login(this.loginForm.value.email, this.loginForm.value.password)
       .subscribe(
         (next: any) => {
           this.loggedUser = next[0];
 
+          console.log(next)
+
           if (this.loggedUser != undefined) {
+
             localStorage.setItem('loggedUser', JSON.stringify(this.loggedUser));
+
             let user: any = localStorage.getItem('loggedUser');
             console.log(JSON.parse(user));
             this.router.navigate(['/'])
-          } else {
-            alert('Login Failed')
-          }
-         
 
+          } else {
+            alert('Authentication failed')
+          }
         }
-      ) :
+      ) 
     alert("Invalid login form")
   }
 
