@@ -52,8 +52,8 @@ export class LoginComponent implements OnInit {
 
             let user: any = localStorage.getItem('loggedUser');
             console.log(JSON.parse(user));
-            this.router.navigate(['/'])
-            window.location.reload();
+            this.router.navigate(['']);
+
           } else {
             alert('Authentication failed')
           }

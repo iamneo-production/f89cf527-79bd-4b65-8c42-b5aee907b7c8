@@ -4,14 +4,17 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { AuthGuardGuard } from './guards/auth-guard.guard';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ViewProductComponent } from './view-product/view-product.component';
 
 
 const routes: Routes = [
+
   {
     path:'',
-    component:HomepageComponent
-   
+    component:HomepageComponent,
+    canActivate:[AuthGuardGuard]
   },
+  
   {
     path:'login',
     component:LoginComponent
@@ -19,6 +22,10 @@ const routes: Routes = [
   {
     path:'sign-up',
     component: SignupComponent
+  },
+  {
+    path:'products',
+    component:ViewProductComponent
   }
 ];
 

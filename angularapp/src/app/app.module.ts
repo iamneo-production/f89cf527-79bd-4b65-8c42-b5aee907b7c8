@@ -21,9 +21,6 @@ import { ViewProductComponent } from './view-product/view-product.component';
 import { HomepageComponent } from './homepage/homepage.component';
 
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,

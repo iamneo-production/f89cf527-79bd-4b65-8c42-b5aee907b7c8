@@ -20,13 +20,12 @@ export class AppComponent {
      
     console.log(s);
     
-    //this.isAdmin = 
   }
   
 
   logOut(){
     localStorage.clear()
     this.router.navigate(['login'])
-    window.location.reload();
+   // window.location.reload();
   }
 }
