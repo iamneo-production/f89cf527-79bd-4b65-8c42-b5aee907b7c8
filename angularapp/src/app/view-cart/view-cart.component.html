@@ -1,11 +1,11 @@
 <br><br>
 <div class="container">
-  <mat-card *ngFor="let product of products">
+  <!-- <mat-card *ngFor="let product of products">
     <div>
       <img src="{{product.imageURL}}" alt="Product image">
     </div>
     <div>
-      <span>{{product.name}}</span><br>
+      <h1>{{product.name}}</h1><br>
       <span>{{product.brand}}</span><br>
       <span>{{product.price}}</span>
     </div>
@@ -15,5 +15,33 @@
         <mat-icon clor="accent">delete</mat-icon>
       </button>
     </mat-card-actions>
-  </mat-card>
+  </mat-card> -->
+
+
+  <div class="card">
+    <div class="card-header">
+      Shopping Cart
+    </div>
+    <div class="card-body" *ngFor="let product of cart.products">
+      <div>
+        <img height="100%" src="{{product.imageURL}}" alt="Product image">
+      </div>
+      <div>
+        <h4>{{product.name}}</h4><br>
+        <span>{{product.brand}}</span><br>
+        <span>{{product.price}}</span>
+      </div>
+      <div>
+        <label for="quantity">Qty</label><br>
+        <input type="number" name="quantity" id="quantity">
+      </div>
+      
+      <div>
+        <button mat-button>
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
 </div>
