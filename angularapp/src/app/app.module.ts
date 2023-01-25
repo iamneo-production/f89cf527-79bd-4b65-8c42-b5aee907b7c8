@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { SearchComponent } from './search/search.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
 import { ViewProductComponent } from './view-product/view-product.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { DeleteProductComponent } from './delete-product/delete-product.component';
 
 
 
@@ -27,7 +29,9 @@ import { ViewProductComponent } from './view-product/view-product.component';
     SearchComponent,
     DisplayUserComponent,
     SignupComponent,
-    ViewProductComponent
+    ViewProductComponent,
+    AddProductComponent,
+    DeleteProductComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +45,7 @@ import { ViewProductComponent } from './view-product/view-product.component';
     MatButtonModule,MatToolbarModule,MatCardModule, BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

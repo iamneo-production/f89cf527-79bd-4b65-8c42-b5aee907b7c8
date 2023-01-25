@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ViewProductService } from './services/view-product.service';
 
 @Component({
   selector: 'app-root',
@@ -7,25 +8,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isAdmin:boolean = false;
-  loggedIn:boolean = false;
+  products:any;
 
-  constructor(private router:Router){
+  
+  // isAdmin:boolean = false;
+  // loggedIn:boolean = false;
 
-    let s = localStorage.getItem('loggedUser');
-    if(s != null){
-      this.isAdmin = JSON.parse(s).role == "admin" ? true : false;
-      this.loggedIn = true;
-    }
-     
-    console.log(s);
-    
-    //this.isAdmin = 
+  constructor(private router:Router,private viewproductService:ViewProductService){
+    viewproductService.products().subscribe((data:any)=>
+    {
+      console.log(data);
+      this.products=data;
+    });
   }
+//     let s = localStorage.getItem('loggedUser');
+//     if(s != null){
+//       this.isAdmin = JSON.parse(s).role == "admin" ? true : false;
+//       this.loggedIn = true;
+//     }
+     
+//     console.log(s);
+    
+//     //this.isAdmin = 
+//   }
   
 
-  logOut(){
-    localStorage.clear()
-    this.router.navigate(['login'])
-  }
+//   logOut(){
+//     localStorage.clear()
+//     this.router.navigate(['login'])
+//   }
+// }
 }
