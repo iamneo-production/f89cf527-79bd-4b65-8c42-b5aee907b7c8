@@ -17,7 +17,7 @@ export class EditOrderComponent implements OnInit {
       quantity:string)
   {
 
-    let updatedOrder = {
+    let editedOrder = {
       id:id,
       ordernumber: orderNumber,
       orderprice: parseFloat(price),
@@ -27,11 +27,11 @@ export class EditOrderComponent implements OnInit {
       quantity:parseInt(quantity)
     }
 
-    console.log(updatedOrder);
+    console.log(editedOrder);
     
-    this.orderdata.editOrders(updatedOrder).subscribe((result:any)=>{
+    this.orderdata.editOrders(editedOrder).subscribe((result:any)=>{
         console.log(result);
-        alert("Successfully Updated");
+        alert("Successfully Edited");
     });
 
   }

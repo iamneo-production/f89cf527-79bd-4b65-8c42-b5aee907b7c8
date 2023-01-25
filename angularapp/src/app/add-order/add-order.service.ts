@@ -15,12 +15,4 @@ export class AddOrderService {
   {
       return this.http.post(this.url,data);
   }
-  updateOrders(data:any)
-  {
-      return this.http.put(this.url+"/"+data.id,data);
-  }
-  deleteOrders(id:number)
-  {
-      return this.http.delete(this.url+"/"+id);
-  }
 }
