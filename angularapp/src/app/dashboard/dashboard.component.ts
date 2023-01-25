@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ViewProductService } from '../services/view-product.service';
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class HomepageComponent implements OnInit {
+export class DashboardComponent implements OnInit {
 
   products:any[]=[];
 
@@ -35,12 +35,6 @@ export class HomepageComponent implements OnInit {
         this.products = next;
       }
     )
-  }
-
-  logOut(){
-    localStorage.clear()
-    this.router.navigate(['login'])
-    
   }
 
 }

@@ -7,13 +7,13 @@ import {HttpClient} from '@angular/common/http'
 })
 export class ViewCartService {
 
-  url = "https://8080-cafcfccaceabeffbedeadcfdbdaabaca.examlyiopb.examly.io/carts"
+  url = "https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/carts"
 
   constructor(private http:HttpClient) { 
 
   }
 
   getCart(){
-    return this.http.get(this.url)
+    return this.http.get(this.url+"/?userId=3")
   }
 }

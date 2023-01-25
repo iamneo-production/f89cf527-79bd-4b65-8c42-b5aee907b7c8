@@ -10,13 +10,13 @@ import { LoginService } from '../../services/login/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  loggedUser:any;
+  loggedUser: any;
 
   constructor(private loginService: LoginService, private router: Router) { }
-  
+
   ngOnInit(): void {
-   console.log("OnInit");
-   
+    console.log("OnInit");
+
   }
 
 
@@ -52,17 +52,21 @@ export class LoginComponent implements OnInit {
 
             let user: any = localStorage.getItem('loggedUser');
             console.log(JSON.parse(user));
-            this.router.navigate(['']);
+            if (user.role == "admin")
+              this.router.navigate(['admin-home/dashboard']);
+
+            this.router.navigate(['/dashboard']);
+
 
           } else {
             alert('Authentication failed')
           }
         }
-      ) 
+      )
     //alert("Invalid login form")
   }
 
-  
+
 }
 
 
