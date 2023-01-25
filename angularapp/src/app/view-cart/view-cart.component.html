@@ -1,0 +1,19 @@
+<br><br>
+<div class="container">
+  <mat-card *ngFor="let product of products">
+    <div>
+      <img src="{{product.imageURL}}" alt="Product image">
+    </div>
+    <div>
+      <span>{{product.name}}</span><br>
+      <span>{{product.brand}}</span><br>
+      <span>{{product.price}}</span>
+    </div>
+
+    <mat-card-actions align="end">
+      <button mat-button>
+        <mat-icon clor="accent">delete</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

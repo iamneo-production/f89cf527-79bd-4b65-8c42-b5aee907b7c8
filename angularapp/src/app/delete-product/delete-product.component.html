@@ -1,53 +1,4 @@
-<!-- <table class="table table-striped">
 
-    <thead>
-
-      <tr>
-
-        <th>Image</th>
-
-        <th>Product Name</th>
-
-        <th>Product Descrip</th>
-
-        <th>Price</th>
-
-        <th>Quantity</th>
-        <th></th>
-        <th></th>
-
-
-      </tr>
-
-    </thead>
-
-    <tbody>
-
-      <tr *ngFor="let product of products">
-
-        <td><img src="{{product.productImageURL}}" alt="Product Image"></td>
-
-        <td>{{product.productName}}</td>
-
-        <td>{{product.productDescription</td>
-
-
-        <td>{{product.productPrice|currency:'R'}}</td>
-
-        <td>{{product.productQuantity</td>
-
-
-        <td><button class="btn btn-danger" (click)="deleteProduct(product)">Delete</button></td>
-
-      </tr>
-
-    </tbody>
-
-  </table> -->
-
-
-
-  
   <table class="table table-striped" >
     <thead>
         <tr>
@@ -65,18 +16,18 @@
             <td>{{ product.id }}</td>
             <td>
                 <img
-                    [src]="product.pimg"
+                    [src]="product.imageURL"
                     class="me-2"
                     style="width: 60px"
                     alt="Not Found"
                 /></td>
                 <td>
-                {{ product.productName }}
+                {{ product.name }}
             </td>
-            <td>{{ product.productDescription }}</td>
-            <td>{{ product.productPrice | currency:'R'}}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price | currency:'R'}}</td>
 
-            <td>Available Stock: {{ product.productQuantity | number }}</td>
+            <td>Available Stock: {{ product.quantity | number }}</td>
             
             
             <td><button mat-fab color="primary"  (click)="deleteProduct(product)" aria-label="Example icon button with a delete icon">

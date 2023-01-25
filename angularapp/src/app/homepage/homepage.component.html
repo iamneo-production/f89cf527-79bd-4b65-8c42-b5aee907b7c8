@@ -1,0 +1,18 @@
+<mat-toolbar class="navbar">
+    <button mat-button routerLink="dashboard">
+        <h2>Lens Mart</h2>
+    </button>
+    <span class="example-spacer"></span>
+    <button mat-button id="homepage" routerLink="dashboard">Home</button>
+    <button mat-button id="cart" routerLink="cart">Cart</button>
+    <button mat-button id="orders" routerLink="order">Orders</button>
+    <span class="example-spacer"></span>
+
+    <button id="logout" mat-raised-button color="accent" class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon" (click)="logOut()">
+        <span>Logout</span>
+    </button>
+</mat-toolbar>
+<br><br>
+<router-outlet></router-outlet>
+
