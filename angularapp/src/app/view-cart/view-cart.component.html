@@ -1,13 +1,16 @@
 <br><br>
 <div class="container">
   <mat-card *ngFor="let product of products">
-    <div>
-      <img src="{{product.imageURL}}" alt="Product image">
+    <div class="cart-image-box">
+      <img height="100%" width="100px" src="{{product.imageURL}}" alt="Product image">
     </div>
     <div>
       <span>{{product.name}}</span><br>
       <span>{{product.brand}}</span><br>
       <span>{{product.price}}</span>
+    </div>
+    <div>
+      <input type="number" name="quantity" value="" id="quantity">
     </div>
 
     <mat-card-actions align="end">
