@@ -23,6 +23,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { AddOrderComponent } from './add-order/add-order.component';
 import { DeleteOrderComponent } from './delete-order/delete-order.component';
 import { ViewOrderComponent } from './view-order/view-order.component';
+import { EditOrderComponent } from './edit-order/edit-order.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ViewOrderComponent } from './view-order/view-order.component';
     HomepageComponent,
     AddOrderComponent,
     ViewOrderComponent,
-    DeleteOrderComponent
+    DeleteOrderComponent,
+    EditOrderComponent
   ],
   imports: [
     BrowserModule,

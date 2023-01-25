@@ -19,6 +19,8 @@ export class DeleteOrderComponent implements OnInit {
   {
     this.orderService.deleteOrders(id).subscribe((result:any)=>{
         console.log(result);
+        location.reload();
+        alert("Successfully Deleted");
     });
 
   }

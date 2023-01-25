@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl} from '@angular/forms';
-import {Validators} from '@angular/forms';
+
 import { AddOrderService } from '../add-order/add-order.service';
 
 @Component({
@@ -15,12 +15,11 @@ export class AddOrderComponent implements OnInit {
 
   orderForm=new FormGroup(
     {
-      ordernumber:new FormControl('',[Validators.required,Validators.minLength(1),Validators.maxLength(5)]),
-      orderprice:new FormControl('',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]),
-      orderdate:new FormControl('',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]),
-      customername:new FormControl(''),
-      productname:new FormControl(''),
-      quantity:new FormControl(''),
+      orderprice:new FormControl('',[Validators.required,Validators.minLength(1),Validators.maxLength(10)]),
+      orderdate:new FormControl('',[Validators.required,Validators.pattern("[yyyy/mm/dd or dd-mm-yyyy]+$")]),
+      customername:new FormControl('',[Validators.required,Validators.pattern("[A-Z a-z]+$")]),
+      productname:new FormControl('',[Validators.required,Validators.pattern("[A-Z a-z]+$")]),
+      quantity:new FormControl('',[Validators.required,Validators.minLength(1),Validators.maxLength(5)]),
     
       
     });
@@ -38,24 +37,13 @@ export class AddOrderComponent implements OnInit {
   {
     this.orderdata.saveOrders(data).subscribe((result:any)=>{
       console.log(result);
-      
+      alert("Successfully Added");
+      this.orderForm.reset();
+       
     });
 
   }
-  updateOrderFormData(data:any)
-  {
-    this.orderdata.updateOrders(data).subscribe((result:any)=>{
-        console.log(result);
-    });
-
-  }
-  deleteOrderFormData(id:any)
-  {
-    this.orderdata.deleteOrders(id).subscribe((result:any)=>{
-        console.log(result);
-    });
-
-  }
+  
 
   get ordernumber()
   {
