@@ -27,6 +27,7 @@ import { AddCartComponent } from './add-cart/add-cart.component';
 import { ViewCartComponent } from './view-cart/view-cart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component'
     AddCartComponent,
     ViewCartComponent,
     DashboardComponent,
-    AdminhomepageComponent
+    AdminhomepageComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,
