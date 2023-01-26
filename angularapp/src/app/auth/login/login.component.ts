@@ -50,12 +50,12 @@ export class LoginComponent implements OnInit {
 
             localStorage.setItem('loggedUser', JSON.stringify(this.loggedUser));
 
-            let user: any = localStorage.getItem('loggedUser');
-            console.log(JSON.parse(user));
+            let user: any = JSON.parse(localStorage.getItem('loggedUser'));
+            
             if (user.role == "admin")
               this.router.navigate(['admin-home/dashboard']);
-
-            this.router.navigate(['/dashboard']);
+            else
+              this.router.navigate(['/dashboard']);
 
 
           } else {
