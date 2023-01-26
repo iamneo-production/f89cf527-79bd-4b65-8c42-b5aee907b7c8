@@ -44,12 +44,29 @@
     ],
     "reviews": [
       {
-        "userId":"",
-        "productId":" ",
-        "ratings":" ",
-        "review": ""
+        "userId":"3",
+        "productId":"6 ",
+        "ratings":"5 ",
+        "review": "Awesome."
         
+      },
+      {
+        "userId":1,
+        "productId":2,
+        "rating":5,
+        "review": "The platform is efficient."
+  
+      },
+  
+      {
+        "userId":2,
+        "productId":4,
+        "rating":3,
+        "review": "Good."
+  
       }
+
+
     ],
       "comments": [
         {

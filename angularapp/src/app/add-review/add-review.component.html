@@ -1,33 +1,50 @@
-<div class="form-group row" id = "review_container">
-    <h2 class="card-title">Product Reviews</h2>
-    <div>
-        <hr>
-        <h4>Add your review here</h4>
+<section class="vh-100" style="background-color: #658864;">
+  <div class="container py-5 h-100">
+   
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="card-body p-4 p-lg-5 text-black">
+
+                <form>
+                  <div id = "review_container">
+                    <h2>Product Reviews</h2>
+
+                    <hr>
+                        <h4>Add your review here</h4>
+
+                        <div class = "rating_container">
+                    
+                          <label for="rating" class="col-sm-2 col-form-label">Rating</label>
+                          <br>
+                          <ngb-rating [max]="5" [(rate)]="currentRate" [readonly]="false" [(ngModel)]="rating"></ngb-rating>
+
+                        </div>
+                    
+                          <label for="review" class="col-sm-2 col-form-label">Review</label>
+                          <div class="col-sm-10">
+                            <textarea name="review" id="review" rows="5" cols = "60" class="form-
+                            control" [(ngModel)]="review" ></textarea>
+                          </div>
+                       
+                          <div class="col-12">
+                            <button type="button" class="btn btn-default float-
+                             right" style="margin-left:20px">Cancel</button>
+                            
+                            <button type="submit" class="btn btn-primary float-left"
+                            style="margin-left:20px" (click)="addRating()">Submit review</button>
+                    
+                            
+                             <hr>
+                          </div>
+                  </div>  
+                
+                </form>
+
+              </div>
+             </div>
+        </div>
+      </div>
     
-        <div class = "rating_container">
-    
-          <label for="rating" class="col-sm-2 col-form-label">Rating</label>
-          <br>
-          <ngb-rating [max]="5" [(rate)]="currentRate" [readonly]="false" [(ngModel)]="rating"></ngb-rating>
-                <br>
-            </div>
-    
-          <label for="review" class="col-sm-2 col-form-label">Review</label>
-          <div class="col-sm-10">
-            <textarea name="review" id="review" rows="5" cols = "50" class="form-
-            control" [(ngModel)]="review"></textarea>
-          </div>
-       
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary float-right"
-            style="margin-left:20px" (click)="addRating()">Submit review</button>
-    
-            <button type="button" class="btn btn-default float-
-             right" style="margin-left:20px">Cancel</button>
-            
-             <hr>
-          </div>
-    </div>
-    
-    
-    
+  </div>
+</section>

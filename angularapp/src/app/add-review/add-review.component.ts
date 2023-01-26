@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AddReviewService } from '../services/add-review.service';
+import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 

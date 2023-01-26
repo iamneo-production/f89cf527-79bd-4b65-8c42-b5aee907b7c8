@@ -22,6 +22,7 @@ import { DisplayUserComponent } from './display-user/display-user.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AddReviewComponent } from './add-review/add-review.component';
+import { ViewReviewComponent } from './view-review/view-review.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AddReviewComponent } from './add-review/add-review.component';
     SignupComponent,
     ViewProductComponent,
     HomepageComponent,
-    AddReviewComponent
+    AddReviewComponent,
+    ViewReviewComponent
    
   ],
   imports: [
