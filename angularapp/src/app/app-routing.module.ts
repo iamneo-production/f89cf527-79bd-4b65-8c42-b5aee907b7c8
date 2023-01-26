@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component';
 import { AppComponent } from './app.component';
@@ -7,6 +7,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuardGuard } from './guards/auth-guard.guard';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ProductInfoComponent } from './product-info/product-info.component';
 import { ViewCartComponent } from './view-cart/view-cart.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 
@@ -37,11 +38,18 @@ const routes: Routes = [
       {
         path:'dashboard',
         component:DashboardComponent,
-        canActivate:[AuthGuardGuard]
+        canActivate:[AuthGuardGuard],
+        children:[
+          {
+            path:'product-info',
+            component:ProductInfoComponent
+          }
+        ]
       },
       {
         path:'products',
-        component:ViewProductComponent
+        component:ViewProductComponent,
+        
       },
       {
         path:'**',
