@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {FormGroup,FormControl} from '@angular/forms';
-import {Validators} from '@angular/forms';
+import { Component, Input, OnInit } from '@angular/core';
 import { AddOrderService } from '../add-order/add-order.service';
 
 @Component({
@@ -8,67 +6,22 @@ import { AddOrderService } from '../add-order/add-order.service';
   templateUrl: './add-order.component.html',
   styleUrls: ['./add-order.component.css']
 })
-export class AddOrderComponent implements OnInit {
+export class AddOrderComponent {
 
-  orders:any;
+  @Input() order:any;
 
 
-  orderForm=new FormGroup(
-    {
-      orderprice:new FormControl('',[Validators.required,Validators.minLength(1),Validators.maxLength(10)]),
-      orderdate:new FormControl('',[Validators.required,Validators.pattern("[yyyy/mm/dd or dd-mm-yyyy]+$")]),
-      customername:new FormControl('',[Validators.required,Validators.pattern("[A-Z a-z]+$")]),
-      productname:new FormControl('',[Validators.required,Validators.pattern("[A-Z a-z]+$")]),
-      quantity:new FormControl('',[Validators.required,Validators.minLength(1),Validators.maxLength(5)]),
-    
-      
-    });
-  constructor (private orderdata:AddOrderService)
+  constructor (private addOrderService:AddOrderService)
   {
     
   }
-  ngOnInit()
-  {
-    
-  }
- 
   
-  addOrderFormData(data:any)
+  addOrder()
   {
-    this.orderdata.saveOrders(data).subscribe((result:any)=>{
+    this.addOrderService.addOrder(this.order).subscribe((result:any)=>{
       console.log(result);
-      alert("Successfully Added");
-      this.orderForm.reset();
-       
+      alert("Successfully Added");     
     });
 
   }
-  
-
-  get ordernumber()
-  {
-    return this.orderForm.get('ordernumber');
-  }
-  get orderprice()
-  {
-    return this.orderForm.get('orderprice');
-  }
-
-  get orderdate()
-  {
-    return this.orderForm.get('orderdate');
-  }
-  get customername()
-  {
-    return this.orderForm.get('customername');
-  }
-  get productname()
-  {
-    return this.orderForm.get('productname');
-  }
-  get quantity()
-  {
-    return this.orderForm.get('quantity');
-  }
- 
 }

@@ -7,12 +7,24 @@ import { EditOrderService } from '../edit-order/edit-order.service';
 })
 export class EditOrderComponent implements OnInit {
 
-  constructor(private orderdata:EditOrderService) { }
+  constructor(private editOrderService:EditOrderService) { }
 
   ngOnInit(): void {
+    this.getOrder();
   }
 
-  editOrderFormData(id:number,orderNumber:string,price:string,date:string,name:string,
+  order:any;
+
+  getOrder(){
+    this.editOrderService.getOrder().subscribe(
+      (result:any)=>{
+     
+     this.order=result;
+     console.log(this.order);
+    });
+
+  }
+  editOrder(id:number,orderNumber:string,price:string,date:string,name:string,
     productName:string,
       quantity:string)
   {
@@ -29,7 +41,7 @@ export class EditOrderComponent implements OnInit {
 
     console.log(editedOrder);
     
-    this.orderdata.editOrders(editedOrder).subscribe((result:any)=>{
+    this.editOrderService.editOrder(editedOrder).subscribe((result:any)=>{
         console.log(result);
         alert("Successfully Edited");
     });
