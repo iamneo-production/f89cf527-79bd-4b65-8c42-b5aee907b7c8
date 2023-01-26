@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 img{
     height: 100%;
     width: 100%;
@@ -17,10 +16,9 @@ img{
     margin: 1rem;
     border-radius: 10px ;
     border: 2px black solid;
-=======
+}
 .card {
     width: 250px;
     display: inline-block;
     margin: 1rem;
->>>>>>> Lens-Mart-App-chavinco
   }
