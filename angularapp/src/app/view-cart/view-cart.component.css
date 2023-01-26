@@ -1,9 +1,15 @@
 .card-body{
     display: flex;
     justify-content: space-between;
-    align-items: right;
+    align-items: start;
     height: 120px;
-    border: 1px solid #658864;
+    border: 2px solid #658864;
     margin: 5px;
     padding:10px;
+    border-radius: 10px;
+}
+
+.checkOut{
+    background-color: #658864;
+    height: 50px;
 }
