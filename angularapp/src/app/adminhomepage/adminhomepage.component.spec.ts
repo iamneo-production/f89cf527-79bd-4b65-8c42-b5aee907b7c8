@@ -2,19 +2,19 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 // import { RouterTestingModule } from '@angular/router/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { HomepageComponent } from './homepage.component';
+import { AdminhomepageComponent } from './adminhomepage.component';
 
-describe('HomepageComponent', () => {
-  let component: HomepageComponent;
+describe('CartComponent', () => {
+  let component: AdminhomepageComponent;
   beforeEach(() => TestBed.configureTestingModule({
     imports: [HttpClientTestingModule], 
-    providers: [HomepageComponent]
+    providers: [AdminhomepageComponent]
   }));
   beforeEach(() => {
-    const fixture = TestBed.createComponent(HomepageComponent);
+    const fixture = TestBed.createComponent(AdminhomepageComponent);
     component = fixture.componentInstance;
   });
-  it('FE_HomePageTest', () => {
+  it('FE_AdminHomePageTest', () => {
     expect(component).toBeTruthy();
   });
 });
