@@ -9,7 +9,7 @@ import { ViewCartService } from './view-cart.service';
 })
 export class ViewCartComponent implements OnInit {
 
-  products:any[] = []
+  cart:any = {};
 
   constructor(private viewCartService: ViewCartService) { }
 
@@ -21,11 +21,9 @@ export class ViewCartComponent implements OnInit {
     this.viewCartService.getCart().subscribe(
       (next: any) => {
         
-        next.forEach((element) => {
-          console.log(element);
-          
-          this.products.push(element.product)
-        });
+        this.cart = next[0];
+        console.log(this.cart);
+        
       }
     )
   }

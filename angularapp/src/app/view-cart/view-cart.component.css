@@ -1,6 +1,7 @@
-mat-card{
+.card-body{
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
     align-items: center;
     height: 120px;
     margin:10px;
@@ -8,4 +9,11 @@ mat-card{
 
 cart-image-box{
     height:100%;
+=======
+    align-items: right;
+    height: 120px;
+    border: 1px solid #658864;
+    margin: 5px;
+    padding:10px;
+>>>>>>> Lens-Mart-App-chavinco
 }

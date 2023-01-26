@@ -13,7 +13,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let product of products">
-                <td>{{ product.pid }}</td>
+                <td>{{ product.id }}</td>
                 <td>
                     <img
                         [src]="product.pimg"
@@ -22,12 +22,12 @@
                         alt="Not Found"
                     /></td>
                     <td>
-                    {{ product.productName }}
+                    {{ product.name }}
                 </td>
-                <td>{{ product.productDescription }}</td>
-                <td>{{ product.productPrice | currency:'R'}}</td>
+                <td>{{ product.description }}</td>
+                <td>{{ product.price | currency:'R'}}</td>
 
-                <td>Available Stock: {{ product.productQuantity | number }}</td>
+                <td>Available Stock: {{ product.quantity | number }}</td>
                 
                 
                 <td><button mat-fab color="primary"  aria-label="Example icon button with a delete icon">

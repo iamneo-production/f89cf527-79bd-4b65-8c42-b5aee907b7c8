@@ -47,12 +47,20 @@ export class LoginComponent implements OnInit {
           if (this.loggedUser != undefined) {
 
             localStorage.setItem('loggedUser', JSON.stringify(this.loggedUser));
+<<<<<<< HEAD
+=======
+
+>>>>>>> Lens-Mart-App-chavinco
             let user: any = JSON.parse(localStorage.getItem('loggedUser'));
             
             if (user.role == "admin")
               this.router.navigate(['admin-home/dashboard']);
             else
               this.router.navigate(['/dashboard']);
+<<<<<<< HEAD
+=======
+
+>>>>>>> Lens-Mart-App-chavinco
 
           } else {
             alert('Authentication failed')
