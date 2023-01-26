@@ -37,8 +37,6 @@ export class LoginComponent implements OnInit {
 
   loginUser(loginForm: any) {
 
-
-
     this.loginService.login(this.loginForm.value.email, this.loginForm.value.password)
       .subscribe(
         (next: any) => {
@@ -49,21 +47,26 @@ export class LoginComponent implements OnInit {
           if (this.loggedUser != undefined) {
 
             localStorage.setItem('loggedUser', JSON.stringify(this.loggedUser));
+<<<<<<< HEAD
+=======
 
-            let user: any = localStorage.getItem('loggedUser');
-            console.log(JSON.parse(user));
+>>>>>>> Lens-Mart-App-chavinco
+            let user: any = JSON.parse(localStorage.getItem('loggedUser'));
+            
             if (user.role == "admin")
               this.router.navigate(['admin-home/dashboard']);
+            else
+              this.router.navigate(['/dashboard']);
+<<<<<<< HEAD
+=======
 
-            this.router.navigate(['/dashboard']);
-
+>>>>>>> Lens-Mart-App-chavinco
 
           } else {
             alert('Authentication failed')
           }
         }
       )
-    //alert("Invalid login form")
   }
 
 
