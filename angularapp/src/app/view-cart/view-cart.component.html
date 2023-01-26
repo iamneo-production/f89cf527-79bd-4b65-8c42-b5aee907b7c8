@@ -7,7 +7,7 @@
     </div>
     <div class="card-body" *ngFor="let product of cart.products">
       <div>
-        <img height="100%" width="150px" src="{{product.imageURL}}" alt="Product image">
+        <img height="90%" width="150px" src="{{product.imageURL}}" alt="Product image">
       </div>
       <div>
         <h4>{{product.name}}</h4><br>
@@ -26,9 +26,10 @@
       </div>
     </div>
     <br>
-    <span align="end"><strong>{{total | currency:'R'}}</strong> </span>
+    <span align="end">Total: <strong>{{total | currency:'R'}}</strong> </span>
     <br><br>
-    <button class="btn btn-secondary checkOut">Check Out</button>
+    <app-delete-cart [cart]="cart"></app-delete-cart>
+    
     <br>
   </div>
 
