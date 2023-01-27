@@ -29,6 +29,7 @@ import { ViewCartComponent } from './view-cart/view-cart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { CustomerOrderComponent } from './customer-order/customer-order.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     ViewCartComponent,
     DashboardComponent,
     AdminhomepageComponent,
-    EditUserComponent
+    EditUserComponent,
+    CustomerOrderComponent
   ],
   imports: [
     BrowserModule,
