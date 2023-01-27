@@ -21,6 +21,22 @@
       "email": "tshabalala.nicolas@gmail.com",
       "mobilenumber": "082457350",
       "password": "1234"
+    },
+    {
+      "email": "shsh@gmail.com",
+      "username": "shu",
+      "mobilenumber": "0725362546",
+      "password": "12345",
+      "confirmpassword": "12345",
+      "id": 4
+    },
+    {
+      "email": "lindo@gmail.com",
+      "username": "lindo",
+      "mobilenumber": "0657451342",
+      "password": "qwerty",
+      "confirmpassword": "qwerty",
+      "id": 5
     }
   ],
   "products": [
@@ -107,6 +123,19 @@
         "quantity": 5
       },
       "id": 5
+    },
+    {
+      "userId": 5,
+      "product": {
+        "id": 2,
+        "name": "Americana 8029",
+        "brand": "Femina",
+        "price": 200,
+        "description": "Glass2 glass desc",
+        "imageURL": "https://www.torgaoptical.co.za/images/thumbs/0733277_americana-8029_750.jpeg",
+        "quantity": 10
+      },
+      "id": 6
     }
   ],
   "orders": [],
