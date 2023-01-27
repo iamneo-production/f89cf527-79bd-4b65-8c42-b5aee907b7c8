@@ -18,12 +18,17 @@ import { ViewProductComponent } from './view-product/view-product.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { AddOrderComponent } from './add-order/add-order.component';
+import { DeleteOrderComponent } from './delete-order/delete-order.component';
+import { ViewOrderComponent } from './view-order/view-order.component';
+import { EditOrderComponent } from './edit-order/edit-order.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { AddCartComponent } from './add-cart/add-cart.component';
 import { ViewCartComponent } from './view-cart/view-cart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
+import { CustomerOrderComponent } from './customer-order/customer-order.component';
 import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
@@ -37,11 +42,16 @@ import {MatDialogModule} from '@angular/material/dialog';
     AddProductComponent,
     DeleteProductComponent,
     HomepageComponent,
+    AddOrderComponent,
+    ViewOrderComponent,
+    DeleteOrderComponent,
+    EditOrderComponent,
     AddCartComponent,
     ViewCartComponent,
     DashboardComponent,
     AdminhomepageComponent,
-    EditUserComponent
+    EditUserComponent,
+    CustomerOrderComponent
   ],
   imports: [
     BrowserModule,
