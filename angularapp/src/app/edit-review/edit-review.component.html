@@ -1,0 +1,27 @@
+<p>edit-review works!</p>
+
+
+<form  [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">userId</label>
+      <input type="text" class="form-control" id="userId" placeholder="UserId">
+    </div><br>
+
+    <div class="form-group">
+      <label for="productId">ProductId</label>
+      <input type="text" class="form-control" id="productId" placeholder=" Enter ProductId">
+    </div><br>
+
+    <div class="form-group">
+        <label for="ratings">Ratings</label>
+        <input type="text" class="form-control" id="ratings" placeholder="Enter Ratings">
+      </div><br>
+
+
+      <div class="form-group">
+        <label for="review">Review</label>
+        <input type="text" class="form-control" id="review" placeholder="Enter Review">
+      </div><br><br>
+    
+    <button type="EditReview" class="btn btn-primary">Edit Review</button>
+  </form>

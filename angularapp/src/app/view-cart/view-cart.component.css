@@ -1,5 +1,15 @@
-mat-card{
+.card-body{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+    height: 120px;
+    border: 2px solid #658864;
+    margin: 5px;
+    padding:10px;
+    border-radius: 10px;
+}
+
+.checkOut{
+    background-color: #658864;
+    height: 50px;
 }

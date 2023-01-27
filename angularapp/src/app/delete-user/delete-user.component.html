@@ -1,12 +1,1 @@
-<h1>Delete User Component</h1>
-
-<ul *ngIf="users">
-    <li>{{users.email}}</li>
-    <li>{{users.username}}</li>
-    <li>{{users.mobileNumber}}</li>
-    <li>{{users.password}}</li>
-
-
-
-    <button id = "deleteUser" (click) = "DeleteUser(users)"> Delete User</button>
-</ul>
+<button id="deleteUser" (click)="DeleteUser()"> Delete User </button>

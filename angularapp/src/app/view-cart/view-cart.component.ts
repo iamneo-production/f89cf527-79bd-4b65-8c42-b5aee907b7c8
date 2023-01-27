@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewCartService } from './view-cart.service';
+import { Cart } from "../models/cart";
 
 
 @Component({
@@ -9,23 +10,30 @@ import { ViewCartService } from './view-cart.service';
 })
 export class ViewCartComponent implements OnInit {
 
-  products:any[] = []
+  cart:Cart;
 
-  constructor(private viewCartService: ViewCartService) { }
+  total:number=0;
+
+  constructor(private viewCartService: ViewCartService) {
+    this.cart = new Cart(3);
+   }
 
   ngOnInit(): void {
+
     this.getCart();
+
+    
   }
 
   getCart() {
     this.viewCartService.getCart().subscribe(
       (next: any) => {
-        
-        next.forEach((element) => {
-          console.log(element);
-          
-          this.products.push(element.product)
+
+        next.forEach(element => {
+          this.cart.products.push(element.product)
+          this.total += parseFloat(element.product.price);
         });
+    
       }
     )
   }

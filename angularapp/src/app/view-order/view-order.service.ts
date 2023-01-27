@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ViewOrderService {
 
-  url="https://8080-afeccbdebfffbedeadcfdbdaabaca.examlyiopb.examly.io/orders://localhost:3000/orders";
+  url="https://8080-afeccbdebfffbedeadcfdbdaabaca.examlyiopb.examly.io/orders";
 
   constructor(private http:HttpClient) { }
 

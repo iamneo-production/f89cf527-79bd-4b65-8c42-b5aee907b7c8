@@ -1,21 +1,24 @@
 img{
     height: 100%;
     width: 100%;
+    border-radius: 10px 10px 0px 0px;
 }
 .product-image-box{
     height: 55%;
+    width: 100%;
     border-radius: 10px 10px 0px 0px;
-    
 }
 
 .example-card {
-    width: 250px;
-    height: 300px;
+    width: 220px;
+    height: fit-content;
     display: inline-block;
     margin: 1rem;
     border-radius: 10px ;
-  }
-  
-  #addToCart{
-      width: 100%;
+    border: 2px black solid;
+}
+.card {
+    width: 250px;
+    display: inline-block;
+    margin: 1rem;
   }

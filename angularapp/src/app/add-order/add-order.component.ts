@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {FormGroup,FormControl} from '@angular/forms';
+import {Validators} from '@angular/forms';
 import { AddOrderService } from '../add-order/add-order.service';
 
 @Component({

@@ -37,8 +37,6 @@ export class LoginComponent implements OnInit {
 
   loginUser(loginForm: any) {
 
-
-
     this.loginService.login(this.loginForm.value.email, this.loginForm.value.password)
       .subscribe(
         (next: any) => {
@@ -49,13 +47,13 @@ export class LoginComponent implements OnInit {
           if (this.loggedUser != undefined) {
 
             localStorage.setItem('loggedUser', JSON.stringify(this.loggedUser));
+            let user: any = JSON.parse(localStorage.getItem('loggedUser'));
+            localStorage.setItem('role', user.role);
 
-            let user: any = localStorage.getItem('loggedUser');
-            console.log(JSON.parse(user));
             if (user.role == "admin")
-              this.router.navigate(['admin-home/dashboard']);
-
-            this.router.navigate(['/dashboard']);
+              this.router.navigate(['admin']);
+            else
+              this.router.navigate(['home']);
 
 
           } else {
@@ -63,7 +61,10 @@ export class LoginComponent implements OnInit {
           }
         }
       )
-    //alert("Invalid login form")
+  }
+
+  signUp(){
+    this.router.navigate(['sign-up'])
   }
 
 
