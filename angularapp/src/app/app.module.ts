@@ -27,6 +27,7 @@ import { AddCartComponent } from './add-cart/add-cart.component';
 import { ViewCartComponent } from './view-cart/view-cart.component';
 import { EditCartComponent } from './edit-cart/edit-cart.component';
 import { DeleteCartComponent } from './delete-cart/delete-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { DeleteCartComponent } from './delete-cart/delete-cart.component';
     ViewCartComponent,
     EditCartComponent,
     DeleteCartComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
