@@ -4,12 +4,8 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ViewProductService {
-  url="https://8080-dadadbcdabbdffbedeadcfdbdaabaca.examlyiopb.examly.io/products";
+export class EditCartService {
 
   constructor(private http:HttpClient) { }
-  products()
-  {
-    return this.http.get(this.url);
-  }
+ 
 }

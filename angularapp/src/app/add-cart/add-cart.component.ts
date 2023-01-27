@@ -14,9 +14,7 @@ export class AddCartComponent implements OnInit {
 
    }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   addToCart(){
 

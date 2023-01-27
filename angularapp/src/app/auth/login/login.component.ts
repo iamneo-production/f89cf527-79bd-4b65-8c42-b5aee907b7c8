@@ -37,8 +37,6 @@ export class LoginComponent implements OnInit {
 
   loginUser(loginForm: any) {
 
-
-
     this.loginService.login(this.loginForm.value.email, this.loginForm.value.password)
       .subscribe(
         (next: any) => {
@@ -63,7 +61,6 @@ export class LoginComponent implements OnInit {
           }
         }
       )
-    //alert("Invalid login form")
   }
 
 
