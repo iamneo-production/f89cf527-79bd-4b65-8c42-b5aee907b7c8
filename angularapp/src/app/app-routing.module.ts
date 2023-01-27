@@ -4,6 +4,7 @@ import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component'
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AdminGuard } from './guards/admin.guard';
 import { AuthGuardGuard } from './guards/auth-guard.guard';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
@@ -14,17 +15,24 @@ import { ViewProductComponent } from './view-product/view-product.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
+    redirectTo: localStorage.getItem('role') == 'admin'
+      ? 'admin' : 'home',
+    pathMatch: 'full',
+
+  },
+  {
+    path:'home',
     component:HomepageComponent,
     canActivate:[AuthGuardGuard],
     children:[
       {
-        path:'dashboard',
+        path:'',
         component:DashboardComponent,
         canActivate:[AuthGuardGuard]
       },
       {
-        path:'carts',
+        path:'cart',
         component:ViewCartComponent,
         canActivate:[AuthGuardGuard]
       },
@@ -37,29 +45,28 @@ const routes: Routes = [
   },
   
   {
-    path:'admin-home',
+    path:'admin',
     component:AdminhomepageComponent,
-    canActivate:[AuthGuardGuard],
+    canActivate:[AuthGuardGuard,AdminGuard],
     children:[
       {
-        path:'dashboard',
+        path:'',
         component:DashboardComponent,
         canActivate:[AuthGuardGuard],
-        children:[
-          {
-            path:'product-info',
-            component:ProductInfoComponent
-          }
-        ]
+      },
+      {
+        path:'product-info/',
+        component:ProductInfoComponent
       },
       {
         path:'products',
         component:ViewProductComponent,
-        
+        canActivate:[AuthGuardGuard, AdminGuard]
       },
       {
-        path:'**',
-        component:LoginComponent
+        path:'orders',
+        component:ViewOrderComponent,
+        canActivate:[AuthGuardGuard, AdminGuard]
       }
     ]
   },

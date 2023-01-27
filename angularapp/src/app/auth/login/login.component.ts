@@ -48,11 +48,13 @@ export class LoginComponent implements OnInit {
 
             localStorage.setItem('loggedUser', JSON.stringify(this.loggedUser));
             let user: any = JSON.parse(localStorage.getItem('loggedUser'));
-            
+            localStorage.setItem('role', user.role);
+
             if (user.role == "admin")
-              this.router.navigate(['admin-home/dashboard']);
+              this.router.navigate(['admin']);
             else
-              this.router.navigate(['/dashboard']);
+              this.router.navigate(['home']);
+
 
           } else {
             alert('Authentication failed')

@@ -1,37 +1,15 @@
-
-<div class="container">
-    <div class="example-card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
-        <div class="product-image-box">
-
-            <a routerLink="product-info">
-                <img mat-card-image src="{{product.imageURL}}" alt="Photo of {{product.name}}">
-            </a>
-           
-            <img width="50%" height="50%" mat-card-image src="{{product.imageURL}}" alt="Photo of {{product.name}}">
-
-        </div>
-        <br>
-        <div class="mat-card-content">
-            <span>{{product.name}}</span><br>
-            <span>{{product.brand}}</span><br>
-            <span>R{{product.price}}</span>
-        </div>
-        <hr>
-        <div class="mat-card-actions">
-            <app-add-cart [product]='product'></app-add-cart>
-        </div>
-
-    </div>
-    <br>
-</div>
-
 <div class="card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
-    <img class=" card-img-top" src="{{product.imageURL}}" alt="Product image">
-    <div class="card-body">
+    <a href (click)="productInfo()">
+        <img class=" card-img-top" src="{{product.imageURL}}" alt="Product image">
+    </a>
+    
+    <div class="card-body" style="text-align: center;">
+        <strong>
         <h3 class="card-title">{{product.name}}</h3>
         <p class="card-text">{{product.brand}}</p>
-        <h4 class="card-text">{{product.price}}</h4>
+        <h4 class="card-text">{{product.price | currency: 'R'}}</h4>
         <app-add-cart [product]='product'></app-add-cart>
+        <!-- <app-prodcut-info [products]='products'></app-product-info> -->
+            </strong>
     </div>
 </div>
-
