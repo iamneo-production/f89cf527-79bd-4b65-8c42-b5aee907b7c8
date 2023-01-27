@@ -1,40 +1,52 @@
 
-    <!-- <table class="table table-striped" >
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Image</th>
-                <th scope="col">Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-                <th scope="col">Operation</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let product of products">
-                <td>{{ product.id }}</td>
-                <td>
-                    <a href="default.asp">
-                    <img
-                        [src]="product.imageURL"
-                        class="me-2"
-                        style="width: 60px"
-                        alt="Not Found"
-                    /></a>
-                </td>
-                    <td>
-                    {{ product.name }}
-                </td>
-                <td>{{ product.description }}</td>
-                <td>{{ product.price | currency:'R'}}</td>
-                
-                <td><button mat-fab color="primary"  aria-label="Example icon button with a editicon">
-                        <mat-icon>review</mat-icon>
-                      </button>
-                </td>
-            </tr>
-        </tbody>
-    </table> -->
-
 
 <h1>This page works</h1>
+
+<!-- 
+<div class="search">
+    <input type="text" placeholder="Search.." [(ngModel)]="Id">
+    <button (click)="searchProduct(Id)">Go</button>
+</div>
+<div class="prod-body clear-float">
+    <div *ngIf="products.productId == productId ;else no_data_templ">
+        <div class="productDetails">
+            <div class="prod-img">
+                <img src="../assets/images/{{product.product.productId}}.jpg" alt="{{products.name}}">
+            </div>
+            <div class="prod-about">
+                <h1>{{product.name}}</h1>
+                <h3>Product Details: </h3>
+                <p>{{products.description}</p>
+            </div>
+        </div>
+        <div class="clear-float"></div>
+        <table class="reviewTable">
+            <tr>
+                <th class="header">POSITIVE</th>
+            </tr>
+            <tr *ngFor="let review of appModel.positive">
+                <div class="margin-top">
+                    <td>
+                        <div class="float-left">
+                            <div class="stars pos-stars">{{review.ratings}}
+                                <span>&#9733;</span>
+                            </div>
+                            <div class="titles float-left">
+                                <b>{{review.title}}</b>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="description clear-float">{{review.description}}</div>
+                            <div class="reviewer"> {{review.reviewerName}}</div>
+                            <div class="date float-left"> {{review.date}}</div>
+                        </div>
+                    </td>
+                </div>
+            </tr>
+        </table>
+
+    </div>
+
+
+
+</div> -->

@@ -1,15 +1,14 @@
-<<<<<<< HEAD
+
 <div class="container">
     <div class="example-card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
         <div class="product-image-box">
-<<<<<<< HEAD
+
             <a routerLink="product-info">
                 <img mat-card-image src="{{product.imageURL}}" alt="Photo of {{product.name}}">
             </a>
            
-=======
-            <img width="100%" height="100%" mat-card-image src="{{product.imageURL}}" alt="Photo of {{product.name}}">
->>>>>>> 86893bcee15d306a190eab5e3620c337a5a9a668
+            <img width="50%" height="50%" mat-card-image src="{{product.imageURL}}" alt="Photo of {{product.name}}">
+
         </div>
         <br>
         <div class="mat-card-content">
@@ -25,7 +24,7 @@
     </div>
     <br>
 </div>
-=======
+
 <div class="card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
     <img class=" card-img-top" src="{{product.imageURL}}" alt="Product image">
     <div class="card-body">
@@ -35,4 +34,4 @@
         <app-add-cart [product]='product'></app-add-cart>
     </div>
 </div>
->>>>>>> Lens-Mart-App-chavinco
+
