@@ -19,16 +19,15 @@
       "id": 3,
       "username": "chavinco",
       "email": "tshabalala.nicolas@gmail.com",
-      "mobilenumber": "0824573500",
-      "password": "1234",
-      "role": "customer"
+      "mobilenumber": "082457350",
+      "password": "1234"
     }
   ],
   "products": [
     {
       "id": 1,
-      "name": "Glass1",
-      "brand": "Ray ban",
+      "name": "Femina 6050",
+      "brand": "Americana",
       "price": 100,
       "description": "Glass1 glass desc",
       "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1481723_femina-6050_750.jpeg",
@@ -36,8 +35,8 @@
     },
     {
       "id": 2,
-      "name": "Glass2",
-      "brand": "Ray ban",
+      "name": "Americana 8029",
+      "brand": "Femina",
       "price": 200,
       "description": "Glass2 glass desc",
       "imageURL": "https://www.torgaoptical.co.za/images/thumbs/0733277_americana-8029_750.jpeg",
@@ -50,8 +49,8 @@
       "userId": 3,
       "product": {
         "id": 1,
-        "name": "Glass1",
-        "brand": "Ray ban",
+        "name": "Femina 6050",
+        "brand": "Americana",
         "price": 100,
         "description": "Glass1 glass desc",
         "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1481723_femina-6050_750.jpeg",
@@ -61,20 +60,20 @@
     {
       "userId": 3,
       "product": {
-        "id": 2,
-        "name": "Glass2",
-        "brand": "Ray ban",
-        "price": 200,
-        "description": "Glass2 glass desc",
-        "imageURL": "https://www.torgaoptical.co.za/images/thumbs/0733277_americana-8029_750.jpeg",
-        "quantity": 10
+        "id": 1,
+        "name": "Femina 6050",
+        "brand": "Americana",
+        "price": 100,
+        "description": "Glass1 glass desc",
+        "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1481723_femina-6050_750.jpeg",
+        "quantity": 5
       },
       "id": 2
     },
     {
       "userId": 3,
       "product": {
-        "name": "Glass3",
+        "name": "lenzo 5463",
         "description": "Glass3 glass desc",
         "price": "1520",
         "imageURL": "https://m.media-amazon.com/images/I/51z4X-x01FL._UX569_.jpg",
@@ -87,6 +86,19 @@
       "userId": 3,
       "product": {
         "id": 1,
+        "name": "Femina 6050",
+        "brand": "Americana",
+        "price": 100,
+        "description": "Glass1 glass desc",
+        "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1481723_femina-6050_750.jpeg",
+        "quantity": 5
+      },
+      "id": 4
+    },
+    {
+      "userId": 3,
+      "product": {
+        "id": 1,
         "name": "Glass1",
         "brand": "Ray ban",
         "price": 100,
@@ -94,7 +106,7 @@
         "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1481723_femina-6050_750.jpeg",
         "quantity": 5
       },
-      "id": 4
+      "id": 5
     }
   ],
   "orders": [],

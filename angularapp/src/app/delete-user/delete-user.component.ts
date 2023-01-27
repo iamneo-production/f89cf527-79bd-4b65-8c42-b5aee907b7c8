@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 
 @Component({
@@ -9,36 +9,26 @@ import { UserService } from '../services/user.service';
 export class DeleteUserComponent implements OnInit {
 
 
-  users:any;
+  @Input() user:any = {};
+
   constructor(private userdata: UserService) { }
 
   ngOnInit(): void {
 
-    this.getUsers();
-  }
-
-  getUsers()
-  {
-    this.userdata.users().subscribe((data:any)=> 
    
-  {
-     const user = data.find((u:any) => u.username == 'chavinco')
-
-      console.log(data);
-      this.users=user;
-  
-    });
   }
+
+
  
-  DeleteUser(data:any)
+  DeleteUser()
   {
  
-   this.userdata.deleteUsers(data).subscribe((result:any)=>
+   this.userdata.deleteUsers(this.user).subscribe((result:any)=>
    
    {
  
      console.log(result);
-     this.getUsers();
+     
    });
 
 }
