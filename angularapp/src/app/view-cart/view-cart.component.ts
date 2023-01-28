@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewCartService } from './view-cart.service';
 import { Cart } from "../models/cart";
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class ViewCartComponent implements OnInit {
 
   total:number=0;
 
-  constructor(private viewCartService: ViewCartService) {
+  constructor(private viewCartService: ViewCartService, private router:Router) {
     this.cart = new Cart(3);
    }
 
@@ -36,6 +37,10 @@ export class ViewCartComponent implements OnInit {
     
       }
     )
+  }
+
+  placeOrder(){
+    this.router.navigate(['home/checkout'])
   }
 
 }

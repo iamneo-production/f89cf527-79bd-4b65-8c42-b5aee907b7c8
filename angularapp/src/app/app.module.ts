@@ -30,6 +30,7 @@ import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component'
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { CustomerOrderComponent } from './customer-order/customer-order.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     DashboardComponent,
     AdminhomepageComponent,
     EditUserComponent,
-    CustomerOrderComponent
+    CustomerOrderComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

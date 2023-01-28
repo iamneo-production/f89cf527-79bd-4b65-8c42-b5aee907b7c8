@@ -13,11 +13,7 @@ import { ViewProductService } from '../services/view-product.service';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-  cartObj = [];
-  cartTotalPrice: any;
-  pay_type = "cash_on_delivery";
-  delivery_address = "";
-
+  
  
   constructor(private router:Router, private cartService:AddCartService, private productService:ViewProductService) {
   }
@@ -58,7 +54,7 @@ export class CheckoutComponent implements OnInit {
   
   payment() {
     
-    this.router.navigate(['/order']);
+    this.router.navigate(['home/orders']);
   }
 
 }

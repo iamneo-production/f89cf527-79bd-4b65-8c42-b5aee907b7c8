@@ -12,4 +12,10 @@
 #btnCheckout{
     background-color: #658864;
     height: 50px;
+    width: 150px;
+}
+
+app-delete-cart{
+    height: 20px;
+    width: 60px;
 }
