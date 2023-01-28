@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AddCartService } from '../add-cart/add-cart.service';
@@ -13,11 +13,7 @@ import { ViewProductService } from '../services/view-product.service';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-  cartObj = [];
-  cartTotalPrice: any;
-  pay_type = "cash_on_delivery";
-  delivery_address = "";
-
+  
  
   constructor(private router:Router, private cartService:AddCartService, private productService:ViewProductService) {
   }
@@ -51,7 +47,7 @@ export class CheckoutComponent implements OnInit {
 
   ngOnInit(): void {
     
-    
+   
   }
   
 

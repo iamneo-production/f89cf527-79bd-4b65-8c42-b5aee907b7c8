@@ -1,0 +1,20 @@
+<h3><b>Orders</b></h3>
+  <table border="2">
+    <th>Order Number</th>
+    <th>Order Price</th>
+    <th>Order Date</th>
+    <th>Customer Name</th>
+    <th>Product Name</th>
+    <th>Quantity</th>
+    <th>Edit</th>
+    <tr *ngFor="let o of orders">
+      
+      <td><input type="text" value="{{o.id}}" #orderNumber></td>
+      <td><input type="text" value="{{o.orderprice}}" #price></td>
+      <td><input type="text" value="{{o.orderdate}}" #date></td>
+      <td><input type="text" value="{{o.customername}}" #name></td>
+      <td><input type="text" value="{{o.productname}}" #productName></td>
+      <td><input type="text" value="{{o.quantity}}" #quantity></td>
+      <td><button (click)="deleteOrderFormData(o.id)">Delete Order</button></td>
+    </tr>
+  </table>

@@ -1,0 +1,11 @@
+<div id="productHomeBody">
+<div class="card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
+    <img class=" card-img-top" src="{{product.imageURL}}" alt="Product image">
+    <div class="card-body">
+        <h3 class="card-title">{{product.name}}</h3>
+        <p class="card-text">{{product.brand}}</p>
+        <h4 class="card-text">{{product.price | currency:'R'}}</h4>
+        <app-add-cart [product]='product'></app-add-cart>
+    </div>
+</div>>
+</div>

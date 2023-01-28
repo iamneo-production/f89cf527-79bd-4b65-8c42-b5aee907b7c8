@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ViewProductService } from '../services/view-product.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class HomepageComponent implements OnInit {
 
   products:any[]=[];
 
-  constructor(private productService:ViewProductService){
+  constructor(private productService:ViewProductService, private router:Router){
 
   }
 
@@ -34,6 +35,12 @@ export class HomepageComponent implements OnInit {
         this.products = next;
       }
     )
+  }
+
+  logOut(){
+    localStorage.clear()
+    this.router.navigate(['login'])
+    
   }
 
 }

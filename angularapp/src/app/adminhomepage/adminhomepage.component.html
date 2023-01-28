@@ -1,0 +1,17 @@
+<mat-toolbar class="navbar" id="adminNavbar">
+    <button mat-button routerLink="">
+        <h2>Lens Mart</h2>
+    </button>
+    <span class="example-spacer"></span>
+    <button mat-button id="adminProductButton " routerLink="products">Products</button>
+    <button mat-button id="adminOrderButton" routerLink="orders">Orders</button>
+    <button mat-button id="userDisplay" routerLink="users">User Management</button>
+    <span class="example-spacer"></span>
+    <button id="logoutButtont" mat-raised-button class="btn btn-danger"
+        aria-label="Example icon-button with heart icon" (click)="logOut()">
+        <span>Logout</span>
+    </button>
+  </mat-toolbar>
+  <br>
+  <br>
+<router-outlet></router-outlet>

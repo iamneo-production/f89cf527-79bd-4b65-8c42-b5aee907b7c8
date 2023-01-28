@@ -8,11 +8,9 @@ import { EditCartService } from '../services/edit-cart.service';
 })
 export class EditCartComponent implements OnInit {
 
-  constructor(private editCartService:EditCartService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
-  
-  
 
 }

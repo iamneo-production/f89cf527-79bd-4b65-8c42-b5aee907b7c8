@@ -7,16 +7,20 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
 
-  url = "https://8080-ebffcadbcbffbedeadcfdbdaabaca.examlyiopb.examly.io/users";
+  url = "https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/users";
 
   
 
   constructor(private http:HttpClient) { }
 
-  users()
+  getUsers()
   {
 
     return this.http.get(this.url);
+  }
+
+  editUser(data: any) {
+    return this.http.put(this.url + "/" + data.id, data)
   }
 
   deleteUsers(data:any)
