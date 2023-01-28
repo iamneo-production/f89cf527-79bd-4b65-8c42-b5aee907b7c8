@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../services/login/login.service';
 import {FormGroup,FormControl,Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 
@@ -12,7 +13,7 @@ import {FormGroup,FormControl,Validators} from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
   users:any;
-  constructor (private userService:LoginService)
+  constructor (private userService:LoginService, private router:Router)
   {
     userService.getUsers().subscribe((data:any)=>
     {
@@ -42,6 +43,7 @@ export class SignupComponent implements OnInit {
           (data:any) => {
             console.log(data);
             this.signupForm.reset();
+            this.router.navigate(['login'])
           }
         )
       }
