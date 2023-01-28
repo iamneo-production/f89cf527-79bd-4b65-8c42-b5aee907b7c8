@@ -7,7 +7,7 @@ import {CustomerOrderService} from './customer-order.service';
 })
 export class CustomerOrderComponent implements OnInit {
 
-  order:any;
+  orders:any[] = [];
   constructor (private customerorderdata:CustomerOrderService)
   {
     

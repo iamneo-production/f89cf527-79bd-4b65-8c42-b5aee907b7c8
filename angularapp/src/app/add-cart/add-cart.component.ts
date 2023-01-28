@@ -8,25 +8,28 @@ import { AddCartService } from './add-cart.service';
 })
 export class AddCartComponent implements OnInit {
 
-  @Input() product:any;
+  @Input() product: any;
 
-  constructor(private addCartService:AddCartService) {
+  constructor(private addCartService: AddCartService) {
 
-   }
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
-  addToCart(){
+  addToCart() {
 
     let cart = {
-      userId : JSON.parse(localStorage.getItem('loggedUser')).id,
+      userId: JSON.parse(localStorage.getItem('loggedUser')).id,
       product: this.product
     }
 
     this.addCartService.addToCart(cart).subscribe(
-      (next:any)=>{
+      (next: any) => {
         console.log(next);
-      
+
+        alert("Product added to cart");
+
+
       }
     )
   }
