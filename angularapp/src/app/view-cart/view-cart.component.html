@@ -19,12 +19,11 @@
         <label for="quantity">Qty:</label><br>
         <input type="number" name="quantity" id="quantity">
       </div>
-      <app-delete-cart [cart]="cart"></app-delete-cart>
     </div>
     <br>
     <span align="end">Total: <strong>{{total | currency:'R'}}</strong> </span>
     <br><br>
-    <app-delete-cart [cart]="cart"></app-delete-cart>
+    
 
     <br>
     <button id="btnCheckout" class="btn" (click)="placeOrder()">Checkout</button>

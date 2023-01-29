@@ -5,12 +5,16 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ViewOrderService {
 
-  url="https://8080-afeccbdebfffbedeadcfdbdaabaca.examlyiopb.examly.io/orders";
+  url="https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/orders";
 
   constructor(private http:HttpClient) { }
 
   getOrders()
   {
     return this.http.get(this.url); 
+  }
+
+  updateOrder(putOrder: any) {
+    return this.http.put(this.url+"/"+putOrder.id, putOrder);
   }
 }

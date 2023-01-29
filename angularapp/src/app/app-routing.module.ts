@@ -4,6 +4,7 @@ import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component'
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { CustomerOrderComponent } from './customer-order/customer-order.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
 import { AdminGuard } from './guards/admin.guard';
@@ -44,7 +45,7 @@ const routes: Routes = [
       },
       {
         path:'orders',
-        component:ViewOrderComponent,
+        component:CustomerOrderComponent,
         canActivate:[AuthGuardGuard]
       },
     ]
