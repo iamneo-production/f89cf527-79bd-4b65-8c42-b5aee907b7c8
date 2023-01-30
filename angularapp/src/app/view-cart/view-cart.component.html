@@ -1,19 +1,33 @@
-<br><br>
+<br>
+<br>
 <div class="container">
-  <mat-card *ngFor="let product of products">
-    <div>
-      <img src="{{product.imageURL}}" alt="Product image">
+  <div class="card p-2">
+    <div class="card-header">
+      Shopping Cart
     </div>
-    <div>
-      <span>{{product.name}}</span><br>
-      <span>{{product.brand}}</span><br>
-      <span>{{product.price}}</span>
+    <div class="card-body" *ngFor="let product of cart.products">
+      <div>
+        <img height="100%" src="{{product.imageURL}}" alt="Product image">
+      </div>
+      <div>
+        <h4>{{product.name}}</h4><br>
+        <span>{{product.brand}}</span><br>
+        <span>{{product.price}}</span>
+      </div>
+      <div>
+        <label for="quantity">Qty</label><br>
+        <input type="number" name="quantity" id="quantity">
+      </div>
+      
+      <div>
+        <button class="remove" mat-button>
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
     </div>
+    <br><br>
+    <button class="btn btn-secondary checkOut">Check Out</button>
+    <br>
+  </div>
 
-    <mat-card-actions align="end">
-      <button mat-button>
-        <mat-icon clor="accent">delete</mat-icon>
-      </button>
-    </mat-card-actions>
-  </mat-card>
 </div>

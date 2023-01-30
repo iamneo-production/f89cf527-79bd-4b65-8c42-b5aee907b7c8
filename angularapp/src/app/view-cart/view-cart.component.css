@@ -1,5 +1,9 @@
-mat-card{
+.card-body{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
+    height: 120px;
+    border: 1px solid #658864;
+    margin: 5px;
+    padding:10px;
 }

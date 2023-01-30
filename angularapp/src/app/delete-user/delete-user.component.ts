@@ -19,7 +19,7 @@ export class DeleteUserComponent implements OnInit {
 
   getUsers()
   {
-    this.userdata.users().subscribe((data:any)=> 
+    this.userdata.getUsers().subscribe((data:any)=> 
    
   {
      const user = data.find((u:any) => u.username == 'chavinco')

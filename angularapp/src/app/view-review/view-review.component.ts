@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewReviewService } from '../services/view-review.service';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-view-review',

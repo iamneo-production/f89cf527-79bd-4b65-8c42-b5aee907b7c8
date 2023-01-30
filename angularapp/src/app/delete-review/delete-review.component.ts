@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DeleteReviewService } from '../services/delete-review.service';
 
 @Component({
   selector: 'app-delete-review',
@@ -12,6 +13,7 @@ export class DeleteReviewComponent implements OnInit {
   constructor(private deleteReviewService: DeleteReviewService) { }
 
   ngOnInit(): void {
+
   }
 
   deleteReviews()

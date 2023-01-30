@@ -1,18 +1,31 @@
+<<<<<<< HEAD
 <div class="container">
-    <mat-card class="example-card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
+    <div class="example-card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
         <div class="product-image-box">
-            <img mat-card-image src="{{product.imageURL}}" alt="Photo of {{product.name}}">
+            <img width="100%" height="100%" mat-card-image src="{{product.imageURL}}" alt="Photo of {{product.name}}">
         </div>
-        <mat-card-content>
+        <br>
+        <div class="mat-card-content">
             <span>{{product.name}}</span><br>
             <span>{{product.brand}}</span><br>
             <span>R{{product.price}}</span>
-        </mat-card-content>
-
-        <mat-card-actions>
+        </div>
+        <hr>
+        <div class="mat-card-actions">
             <app-add-cart [product]='product'></app-add-cart>
-        </mat-card-actions>
+        </div>
 
-    </mat-card>
+    </div>
     <br>
 </div>
+=======
+<div class="card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
+    <img class=" card-img-top" src="{{product.imageURL}}" alt="Product image">
+    <div class="card-body">
+        <h3 class="card-title">{{product.name}}</h3>
+        <p class="card-text">{{product.brand}}</p>
+        <h4 class="card-text">{{product.price}}</h4>
+        <app-add-cart [product]='product'></app-add-cart>
+    </div>
+</div>
+>>>>>>> Lens-Mart-App-chavinco
