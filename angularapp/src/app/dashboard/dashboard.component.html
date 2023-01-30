@@ -1,16 +1,17 @@
-<div class="card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
-    <a href (click)="productInfo()">
-        <img class=" card-img-top" src="{{product.imageURL}}"  alt="Product image">
-    </a>
-    
-    <div class="card-body" style="text-align: center;">
-        <strong>
-        <h3 class="card-title">{{product.name}}</h3>
-        <p class="card-text">{{product.brand}}</p>
-        <h4 class="card-text">{{product.price | currency: 'R'}}</h4>
-        <app-add-cart [product]='product'></app-add-cart>
-    </strong>
-        <!-- <app-product-info [products]='products'></app-product-info> -->
-            
+<div class="container">
+    <div class="card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
+        <a href (click)="productInfo()">
+        <img class=" card-img-top" src="{{product.imageURL}}" alt="Product image">
+        </a>
+        <div class="card-body">
+            <strong>
+            <h3 class="card-title">{{product.name}}</h3>
+            <p class="card-text">{{product.brand}}</p>
+            <h4 class="card-text">{{product.price | currency:'R'}}</h4>
+        </strong>
+            <app-add-cart [product]='product'></app-add-cart>
+            <!-- <app-product-info [products]='products'></app-product-info> -->
+
+        </div>
     </div>
 </div>

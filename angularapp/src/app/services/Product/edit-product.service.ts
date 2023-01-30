@@ -4,35 +4,21 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
-
-
-  url = "https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/users";
+export class EditProductService {
+  
+  url = "https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/products";
 
   
 
   constructor(private http:HttpClient) { }
 
-  getUsers()
+  getProduct()
   {
 
     return this.http.get(this.url);
   }
 
-  editUser(data: any) {
+  editProduct(data: any) {
     return this.http.put(this.url + "/" + data.id, data)
   }
-
-  deleteUsers(data:any)
-  {
-
-    return this.http.delete(this.url+"/"+data.id);
-  }
-
 }
-
-
-
- 
-
- 

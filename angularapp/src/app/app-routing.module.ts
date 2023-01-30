@@ -4,6 +4,7 @@ import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component'
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { DisplayUserComponent } from './display-user/display-user.component';
 import { AdminGuard } from './guards/admin.guard';
 import { AuthGuardGuard } from './guards/auth-guard.guard';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -67,6 +68,11 @@ const routes: Routes = [
         path:'orders',
         component:ViewOrderComponent,
         canActivate:[AuthGuardGuard, AdminGuard]
+      },
+      {
+        path:'users',
+        component:DisplayUserComponent,
+        canActivate:[AuthGuardGuard, AdminGuard]
       }
     ]
   },
@@ -77,8 +83,7 @@ const routes: Routes = [
   {
     path:'sign-up',
     component: SignupComponent
-  }
-
+  },
 ];
 
 @NgModule({
