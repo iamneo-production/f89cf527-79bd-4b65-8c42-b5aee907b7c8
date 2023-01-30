@@ -38,6 +38,7 @@ import {MatCardModule} from '@angular/material/card';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
+import { EditProductComponent } from './edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
     CustomerOrderComponent,
     CheckoutComponent,
     DeleteCartComponent,
-    DeleteUserComponent
+    DeleteUserComponent,
+    EditProductComponent
   ],
   imports: [
     BrowserModule,

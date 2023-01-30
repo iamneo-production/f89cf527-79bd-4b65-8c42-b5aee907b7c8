@@ -61,7 +61,7 @@
       "price": "1250",
       "description": "Glass1 glass desc",
       "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1481723_femina-6050_750.jpeg",
-      "quantity": 15
+      "quantity": 9
     },
     {
       "id": 2,
@@ -127,12 +127,21 @@
       "quantity": 10
     },
     {
+      "id": 9,
       "name": "Glass 1",
-      "description": "America",
+      "brand": "glaases",
       "price": "2000.00",
-      "imageURL": "",
-      "quantity": 2,
-      "id": 9
+      "description": "America",
+      "imageURL": "https://www.torgaoptical.co.za/images/thumbs/0733277_americana-8029_750.jpeg",
+      "quantity": 2
+    },
+    {
+      "name": "Product 1",
+      "description": "Product one desc",
+      "price": "1400",
+      "imageURL": "https://cdn.cdnkfml.co.za/Specsavers/live/south-africa/home/shop-online-specs.png",
+      "quantity": 5,
+      "id": 10
     }
   ],
   "carts": [
@@ -174,6 +183,19 @@
         "quantity": 5
       },
       "id": 22
+    },
+    {
+      "userId": 1,
+      "product": {
+        "id": 3,
+        "name": "K-Collection 3004 Grey",
+        "brand": "K-Collection",
+        "price": 2830,
+        "description": "K-Collection 3004 Grey",
+        "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1249342_k-collection-3004.jpeg",
+        "quantity": 10
+      },
+      "id": 23
     }
   ],
   "orders": [

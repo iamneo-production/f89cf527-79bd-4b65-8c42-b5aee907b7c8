@@ -1,0 +1,56 @@
+<div class="card-body p-1">
+    <h3 class="text-center mb-2">Update Product</h3>
+    <form [formGroup]="editForm" (ngSubmit)="editProduct(editForm)">
+            <input type="hidden" id="id" placeholder="Enter id" name="id" formControlName="id">
+            <br><br>
+            <div class="form-outline mb-3">
+                <label for="name">Product name:</label>
+                <input type="text" id="name" placeholder="Enter Name" name="name" formControlName="name"
+                  class="form-control form-control" />
+                <!-- <span style="color:red;" *ngIf="name && name.invalid&& name.touched">
+                  Please enter product name
+                </span> -->
+              </div>
+              <div class="form-outline mb-3">
+                <label for="name">Product brand:</label>
+                <input type="text" id="brand" placeholder="Enter brand" name="brand" formControlName="brand"
+                  class="form-control form-control" />
+                <!-- <span style="color:red;" *ngIf="brand && brand.invalid&& brand.touched">
+                  Please enter product brand
+                </span> -->
+              </div>
+              <div class="form-outline mb-3">
+                <label for="name">Product price:</label>
+                <input type="text" id="price" placeholder="Enter price" name="price" formControlName="price"
+                  class="form-control form-control" />
+                <!-- <span style="color:red;" *ngIf="price && price.invalid&& price.touched">
+                  Please enter product price
+                </span> -->
+              </div>
+              <div class="form-outline mb-3">
+                <label for="description">Product Description:</label>
+                <input type="text" id="description" placeholder="Enter description" name="description" formControlName="description"
+                  class="form-control form-control" />
+                <!-- <span style="color:red;" *ngIf="description && description.invalid&& description.touched">
+                  Please enter product Description
+                </span> -->
+              </div>
+              <div class="form-outline mb-3">
+                <label for="imageURL">Product Image Url:</label>
+                <input type="text" id="imageURL" placeholder="Enter imageURL" name="imageURL" formControlName="imageURL"
+                  class="form-control form-control" />
+                <!-- <span style="color:red;" *ngIf="imageURL && imageURL.invalid&& imageURL.touched">
+                  Please enter product Image Url
+                </span> -->
+              </div> 
+              <div class="form-outline mb-3">
+                <label for="quantity">Product Quantity:</label>
+                <input type="number" id="quantity" placeholder="Enter quantity" name="quantity" formControlName="quantity"
+                  class="form-control form-control" />
+                <!-- <span style="color:red;" *ngIf="quantity && quantity.invalid&& quantity.touched">
+                  Please enter product Quantity
+                </span> -->
+              </div>
+              <input type="submit" value="Submit" id="submitButton">
+    </form>
+  </div>
