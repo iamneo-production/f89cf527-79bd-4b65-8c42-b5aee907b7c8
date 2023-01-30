@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AddOrderService {
 
-  url="https://8080-afeccbdebfffbedeadcfdbdaabaca.examlyiopb.examly.io/orders";
+  url="https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/orders";
 
   constructor(private http:HttpClient) { }
   
