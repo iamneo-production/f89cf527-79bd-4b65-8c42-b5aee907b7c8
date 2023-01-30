@@ -1,12 +1,4 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatButtonModule } from "@angular/material/button";
-import { MatCardModule } from '@angular/material/card';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatIconModule} from '@angular/material/icon';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LoginComponent } from './auth/login/login.component';
@@ -25,13 +17,25 @@ import { EditOrderComponent } from './edit-order/edit-order.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { AddCartComponent } from './add-cart/add-cart.component';
 import { ViewCartComponent } from './view-cart/view-cart.component';
+import { EditCartComponent } from './edit-cart/edit-cart.component';
+import { DeleteCartComponent } from './delete-cart/delete-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { CustomerOrderComponent } from './customer-order/customer-order.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { DeleteCartComponent } from './delete-cart/delete-cart.component';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
+
+
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 
@@ -52,6 +56,9 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
     EditOrderComponent,
     AddCartComponent,
     ViewCartComponent,
+    EditCartComponent,
+    DeleteCartComponent,
+    CheckoutComponent,
     DashboardComponent,
     AdminhomepageComponent,
     EditUserComponent,
@@ -68,6 +75,12 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
     NgbModule,
     FormsModule,
     Ng2SearchPipeModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatIconModule, 
+    BrowserAnimationsModule,
+    MatDialogModule,
     MatButtonModule,MatToolbarModule,MatCardModule,MatIconModule, BrowserAnimationsModule,MatDialogModule,MatSnackBarModule
   ],
   providers: [],
