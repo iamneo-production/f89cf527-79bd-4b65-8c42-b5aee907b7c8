@@ -33,6 +33,7 @@ import { EditReviewComponent } from './edit-review/edit-review.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { ProductReviewComponent } from './product-review/product-review.component';
 import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 
@@ -68,7 +69,7 @@ import {MatInputModule} from '@angular/material/input';
     NgbModule,
     FormsModule,
     MatButtonModule,MatToolbarModule,MatCardModule, BrowserAnimationsModule, NgbRatingModule, MatCardModule,
-    Ng2SearchPipeModule,
+    Ng2SearchPipeModule, MatFormFieldModule,
     MatButtonModule,MatToolbarModule,MatCardModule,MatIconModule, BrowserAnimationsModule, NgbRatingModule 
   ],
   providers: [],

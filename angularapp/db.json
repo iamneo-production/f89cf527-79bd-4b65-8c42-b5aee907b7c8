@@ -29,6 +29,7 @@
     {
       "userId":1,
       "productId":2,
+      "date":"",
       "rating":5,
       "review": "The platform is efficient."
 
@@ -37,6 +38,7 @@
     {
       "userId":2,
       "productId":4,
+      "date":"",
       "rating":3,
       "review": "Good."
     },
@@ -44,6 +46,7 @@
     {
       "userId":3,
       "productId":4,
+      "date":"",
       "rating":3,
       "review": "Awesome product."
     }
