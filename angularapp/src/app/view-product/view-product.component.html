@@ -12,7 +12,7 @@
                 <th scope="col">Description</th>
                 <th scope="col">Price</th>
                 <th scope="col">Items stock</th>
-                <th scope="col" colspan="2">Operation</th>
+                <th scope="col" colspan="2">Operations</th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +31,7 @@
                         <mat-icon>edit</mat-icon>
                     </button>
                 </td>
+                <td><app-delete-product [product]="product" ></app-delete-product></td>
             </tr>
         </tbody>
     </table>

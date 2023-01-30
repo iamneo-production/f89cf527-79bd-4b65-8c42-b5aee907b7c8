@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewCartService } from './view-cart.service';
 import { Cart } from "../models/cart";
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,12 +11,11 @@ import { Cart } from "../models/cart";
 })
 export class ViewCartComponent implements OnInit {
 
-  cart:Cart;
-
+  carts:any[];
   total:number=0;
 
-  constructor(private viewCartService: ViewCartService) {
-    this.cart = new Cart(3);
+  constructor(private viewCartService: ViewCartService, private router:Router) {
+    
    }
 
   ngOnInit(): void {
@@ -29,13 +29,17 @@ export class ViewCartComponent implements OnInit {
     this.viewCartService.getCart().subscribe(
       (next: any) => {
 
-        next.forEach(element => {
-          this.cart.products.push(element.product)
-          this.total += parseFloat(element.product.price);
+        this.carts = next;
+        next.forEach((element:any) => {
+          this.total += parseInt(element.product.price)
         });
     
       }
     )
+  }
+
+  placeOrder(){
+    this.router.navigate(['home/checkout'])
   }
 
 }

@@ -32,6 +32,20 @@ export class SignupComponent implements OnInit {
 
     });
 
+    detailsForm = new FormGroup(
+      {
+        name:new FormControl('')
+      }
+    );
+
+    addressForm = new FormGroup(
+      {
+        city:new FormControl('')
+      }
+    );
+
+
+
   signUp(data: any) {
 
     console.log(data);

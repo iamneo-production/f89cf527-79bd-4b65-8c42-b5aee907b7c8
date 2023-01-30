@@ -5,12 +5,12 @@ import {HttpClient} from '@angular/common/http';
 })
 export class CustomerOrderService {
 
-  url="http://localhost:3000/orders";
+  url="https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/orders";
 
   constructor(private http:HttpClient) { }
   
-  CustomerOrder()
+  getCustomerOrders(id:number)
   {
-    return this.http.get(this.url); 
+    return this.http.get(this.url+"?userId="+id);
   }
 }

@@ -19,7 +19,4 @@ export class ViewCartService {
     return this.http.get(this.url+"/?userId="+user.id)
   }
 
-  checkout(){
-    this.router.navigate(['checkout']);
-  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DeleteProductService } from '../services/Product/delete-product.service';
 
 @Component({
@@ -8,28 +8,22 @@ import { DeleteProductService } from '../services/Product/delete-product.service
 })
 export class DeleteProductComponent {
 
-  products:any;
+  @Input() product:any;
 
   constructor(private deleteproductService:DeleteProductService) {
-    this.getProducts();
-   }
-
-   getProducts(){
-    this.deleteproductService.products().subscribe((data:any)=>{
-      console.log(data)
-      this.products=data;
-    })
   }
+
+ 
 
   ngOnInit(): void{}
 
-  deleteProduct(data: any) {
-    console.log(data)
+  deleteProduct() {
+    
     if (confirm("Confirm Product Delete")) {
-      this.deleteproductService.deleteProduct(data).subscribe(
+      this.deleteproductService.deleteProduct(this.product).subscribe(
         (data:any) => {
-        // console.log(data)
-        this.getProducts()
+        
+        location.reload();
       });
     }
   }

@@ -2,14 +2,19 @@
     display: flex;
     justify-content: space-between;
     align-items: start;
-    height: 120px;
+    height: fit-content;
     border: 2px solid #658864;
     margin: 5px;
     padding:10px;
     border-radius: 10px;
 }
 
+.card{
+    height:fit-content;
+}
+
 #btnCheckout{
     background-color: #658864;
     height: 50px;
+    width: 150px;
 }

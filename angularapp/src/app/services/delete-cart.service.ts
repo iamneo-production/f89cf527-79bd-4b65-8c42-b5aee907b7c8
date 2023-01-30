@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class DeleteCartService {
   
-  url = "https://8080-cafcfccaceabeffbedeadcfdbdaabaca.examlyiopb.examly.io/carts";
+  url = "https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/carts";
 
   constructor(private http:HttpClient) { }
   

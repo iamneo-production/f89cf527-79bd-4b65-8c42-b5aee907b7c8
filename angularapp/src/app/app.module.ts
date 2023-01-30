@@ -30,6 +30,11 @@ import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component'
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { CustomerOrderComponent } from './customer-order/customer-order.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { DeleteCartComponent } from './delete-cart/delete-cart.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [
@@ -51,7 +56,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     DashboardComponent,
     AdminhomepageComponent,
     EditUserComponent,
-    CustomerOrderComponent
+    CustomerOrderComponent,
+    CheckoutComponent,
+    DeleteCartComponent,
+    DeleteUserComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +69,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     NgbModule,
     FormsModule,
     Ng2SearchPipeModule,
-    MatButtonModule,MatToolbarModule,MatCardModule,MatIconModule, BrowserAnimationsModule,MatDialogModule
+    MatButtonModule,MatToolbarModule,MatCardModule,MatIconModule, BrowserAnimationsModule,MatDialogModule,MatSnackBarModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent],

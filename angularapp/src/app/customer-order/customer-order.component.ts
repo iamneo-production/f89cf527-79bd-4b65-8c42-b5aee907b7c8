@@ -8,7 +8,8 @@ import {CustomerOrderService} from './customer-order.service';
 export class CustomerOrderComponent implements OnInit {
 
   orders:any[] = [];
-  constructor (private customerorderdata:CustomerOrderService)
+  total: number = 0;
+  constructor (private customerOrderService:CustomerOrderService)
   {
     
   }
@@ -18,9 +19,16 @@ export class CustomerOrderComponent implements OnInit {
   }
  
   getCustomerOrders(){
-    this.customerorderdata.CustomerOrder().subscribe((result:any)=>{
+    let user = JSON.parse(localStorage.getItem('loggedUser') || '{loggedUser:null}')
+
+    this.customerOrderService.getCustomerOrders(user.id).subscribe((result:any)=>{
       console.log(result);
-      this.customerorderdata=result;
+      this.orders = result;
+      this.orders.forEach((order:any) => {
+        order.products.forEach((product:any) => {
+          this.total += product.price
+        });
+      });
     
       
     });

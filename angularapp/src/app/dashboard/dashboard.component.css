@@ -21,4 +21,9 @@ img{
     width: 230px;
     display: inline-block;
     margin: 1rem;
+    
+  }
+  .container
+  {
+      background-color: #EEEEEE;
   }
