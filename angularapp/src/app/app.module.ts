@@ -36,6 +36,8 @@ import {MatCardModule} from '@angular/material/card';
 
 
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,10 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
     DashboardComponent,
     AdminhomepageComponent,
     EditUserComponent,
-    CustomerOrderComponent
+    CustomerOrderComponent,
+    CheckoutComponent,
+    DeleteCartComponent,
+    DeleteUserComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +80,8 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
     MatCardModule,
     MatIconModule, 
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule,MatToolbarModule,MatCardModule,MatIconModule, BrowserAnimationsModule,MatDialogModule,MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -24,6 +24,21 @@ export class ViewOrderComponent implements OnInit {
      this.orders=result;
      console.log(this.orders);
     });
-
   }
+
+  updateOrder(order:any, status:string){
+
+    console.log(order);
+    console.log(status);
+    
+    
+    let putOrder = order;
+    putOrder.status = status;
+
+    this.viewOrdersService.updateOrder(putOrder).subscribe(
+      (next:any)=>{
+        console.log(next);
+      }
+    )
+   }
 }

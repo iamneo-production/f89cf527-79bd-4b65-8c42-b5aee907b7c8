@@ -21,7 +21,7 @@ export class DeleteCartComponent implements OnInit {
   deleteCart() {
     this.deleteCartService.deleteCart(this.cart).subscribe((result: any) => {
       console.log(result);
-
+      location.reload();
     });
   }
 
