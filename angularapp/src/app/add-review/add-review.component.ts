@@ -23,6 +23,9 @@ export class AddReviewComponent implements OnInit {
 
   rating:number = 0;
   review:string = '';
+  date=Date();
+
+  currentRate = 0;
 
   productRating = {
     userid : this.user.id,
@@ -32,9 +35,6 @@ export class AddReviewComponent implements OnInit {
   }
 
   
-  
-  currentRate = 0;
-
   addRating(){
     alert(this.rating +" "+ this.review)
 

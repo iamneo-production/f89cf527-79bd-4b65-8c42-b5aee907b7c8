@@ -39,6 +39,8 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
+import { ProductReviewComponent } from './product-review/product-review.component';
+import { ProductInfoComponent } from './product-info/product-info.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     CheckoutComponent,
     DeleteCartComponent,
     DeleteUserComponent,
-    EditProductComponent
+    EditProductComponent,
+    ProductReviewComponent,
+    ProductInfoComponent
   ],
   imports: [
     BrowserModule,

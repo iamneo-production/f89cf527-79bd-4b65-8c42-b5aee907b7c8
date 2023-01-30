@@ -4,28 +4,22 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class DeleteReviewService {
+export class ProductReviewService {
+ 
 
-  url = "";
+  url="https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/reviews";
 
   constructor(private http:HttpClient) { }
 
-  reviews()
+  productReviews()
   {
 
     return this.http.get(this.url);
-  }
-
-  deleteReviews(data:any)
-  {
-
-    return this.http.delete(this.url+"/"+data.id);
 
   }
+
+  getReviews(id:number) {
+    return this.http.get(this.url+"/?productId="+id)
+   }
 
 }
-
-
- 
-
-  
