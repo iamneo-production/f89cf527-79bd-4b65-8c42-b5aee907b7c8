@@ -13,4 +13,5 @@ export class AddCartService {
   addToCart(data:any){
     return this.http.post(this.url, data)
   }
+ 
 }

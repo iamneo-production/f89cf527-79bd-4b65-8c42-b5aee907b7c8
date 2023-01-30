@@ -2,15 +2,13 @@
 
 
   <div class="container">
-    <div class="row">
-
+    
       <div class="search-hero">
         <h1>User Account Information</h1>
         <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
           placeholder="Enter Value To Search">
 
-<br><br>
-
+        <br><br>
         <table class="table">
           <thead>
             <th scope="col">Username</th>
@@ -23,14 +21,18 @@
               <td>{{u.username}}</td>
               <td>{{u.email}}</td>
               <td>{{u.mobilenumber}}</td>
-              <td><button class="btn btn-secondary" (click)="editUser(u)">Edit</button></td>
-              <!-- <button class="btn btn-danger" >Delete</button> -->
-              <td> <app-delete-user [user]='u'></app-delete-user></td>
-             
+              <td>
+                <button mat-fab color="primary" class="btn btn-secondary" (click)="editUser(u)">
+                  <mat-icon>edit</mat-icon>
+                </button>
+              </td>
+              <td>
+                <app-delete-user [user]='u'></app-delete-user>
+              </td>
             </tr>
           </tbody>
 
         </table>
       </div>
-    </div>
+   
   </div>

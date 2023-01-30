@@ -34,6 +34,10 @@ import { ViewProductService } from './services/view-product.service';
 import { CustomerOrderComponent } from './customer-order/customer-order.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { EditProductComponent } from './edit-product/edit-product.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { DeleteCartComponent } from './delete-cart/delete-cart.component';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +61,12 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     EditUserComponent,
     ProductInfoComponent,
     CustomerOrderComponent,
-    EditProductComponent
+    EditProductComponent,
+    CustomerOrderComponent,
+    CheckoutComponent,
+    DeleteCartComponent,
+    DeleteUserComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -67,7 +76,13 @@ import { EditProductComponent } from './edit-product/edit-product.component';
     NgbModule,
     FormsModule,
     Ng2SearchPipeModule,
-    MatButtonModule,MatToolbarModule,MatCardModule,MatIconModule, BrowserAnimationsModule,MatDialogModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatIconModule, 
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatSnackBarModule
   ],
   providers: [
     Productreview,
