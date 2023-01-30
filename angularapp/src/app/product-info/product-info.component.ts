@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Productreview } from '../models/productreview.model';
 import { ViewProductService } from '../services/view-product.service';
 
@@ -8,21 +9,16 @@ import { ViewProductService } from '../services/view-product.service';
   styleUrls: ['./product-info.component.css']
 })
 export class ProductInfoComponent{
-  Id: any;
-  productId:any;
-  products:any;
+
+  product:any;
   
-  constructor(public productModel: Productreview, public viewproductService: ViewProductService) {
-    viewproductService.products().subscribe((data:any)=>
-    {
-      this.products=data;
-  
-    })
+  constructor(private router:Router, activatedRoute:ActivatedRoute ) {
+
+    this.product = activatedRoute.snapshot.queryParams;
+    console.log(this.product);
+    
+    
   }
-  searchProduct(id){
-    this.productId=this.Id;
-    this.productModel.allreviews=[];
-    this.productModel.getReviews(this.Id);
-  }
+
     
 }

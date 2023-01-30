@@ -1,86 +1,15 @@
-
-    <!-- <table class="table table-striped" >
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Image</th>
-                <th scope="col">Name</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-                <th scope="col">Operation</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let product of products">
-                <td>{{ product.id }}</td>
-                <td>
-                    <a href="default.asp">
-                    <img
-                        [src]="product.imageURL"
-                        class="me-2"
-                        style="width: 60px"
-                        alt="Not Found"
-                    /></a>
-                </td>
-                    <td>
-                    {{ product.name }}
-                </td>
-                <td>{{ product.description }}</td>
-                <td>{{ product.price | currency:'R'}}</td>
-                
-                <td><button mat-fab color="primary"  aria-label="Example icon button with a editicon">
-                        <mat-icon>review</mat-icon>
-                      </button>
-                </td>
-            </tr>
-        </tbody>
-    </table> -->
-
-
-<h1>This page works</h1>
-
-
-
-<!-- <div class="search">
-    <input type="text" placeholder="Search.." [(ngModel)]="Id">
-    <button (click)="searchProduct(Id)">Go</button>
-</div> -->
-<div class="prod-body clear-float">
-    <div *ngIf="productModel.product.productId == productId ;">
-        <div class="productDetails">
-            <div class="prod-img">
-                <img src="{{productModel.product.productId}}.jpg" alt="{{Productreview.product.name}}">
-            </div>
-            <div class="prod-about">
-                <h1>{{productModel.product.name}}</h1>
-                <h3>Product Details: </h3>
-                <p>{{productModel.product.description}}</p>
-            </div>
-        </div>
-        <div class="clear-float"></div>
-        <table class="reviewTable">
-            <tr>
-                <th class="header">POSITIVE</th>
-            </tr>
-            <tr *ngFor="let review of productModel.allReviews">
-                <div class="margin-top">
-                    <td>
-                        <div class="float-left">
-                            <div class="stars pos-stars">{{review.ratings}}
-                                <span>&#9733;</span>
-                            </div>
-                            <div class="titles float-left">
-                                <b>{{review.email}}</b>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="description clear-float">{{review.description}}</div>
-                            <!-- <div class="reviewer"> {{review.reviewerName}}</div> -->
-                            <!-- <div class="date float-left"> {{review.date}}</div> -->
-                        </div>
-                    </td>
-                </div>
-            </tr>
-        </table>
-
+<div class="container">
+    <div>
+        <img src="{{product.imageURL}}" alt="productImage">
     </div>
+    <div>
+        <span>{{product.name}}</span><br>
+        <span>{{product.brand}}</span><br>
+        <span>{{product.price}}</span><br>
+        <span>{{product.description}}</span>
+    </div>
+    <hr>
+    <button>Add review</button>
+    <br>
+    <br>
+</div>

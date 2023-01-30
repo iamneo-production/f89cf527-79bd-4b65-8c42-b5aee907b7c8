@@ -35,6 +35,11 @@ const routes: Routes = [
         canActivate:[AuthGuardGuard]
       },
       {
+        path:'product-info',
+        component:ProductInfoComponent,
+        canActivate:[AuthGuardGuard]
+      },
+      {
         path:'cart',
         component:ViewCartComponent,
         canActivate:[AuthGuardGuard]
@@ -63,8 +68,9 @@ const routes: Routes = [
         canActivate:[AuthGuardGuard],
       },
       {
-        path:'product-info/',
-        component:ProductInfoComponent
+        path:'product-info',
+        component:ProductInfoComponent,
+        canActivate:[AuthGuardGuard]
       },
       {
         path:'products',
