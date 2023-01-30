@@ -1,9 +1,25 @@
+mat-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .card-body{
     display: flex;
     justify-content: space-between;
-    align-items: right;
-    height: 120px;
-    border: 1px solid #658864;
+    align-items: start;
+    height: fit-content;
+    border: 2px solid #658864;
     margin: 5px;
     padding:10px;
+    border-radius: 10px;
+}
+
+.card{
+    height:fit-content;
+}
+
+#btnCheckout{
+    background-color: #658864;
+    height: 50px;
+    width: 150px;
 }

@@ -6,12 +6,12 @@ import {HttpClient} from '@angular/common/http';
 })
 export class AddOrderService {
 
-  url="http://localhost:3000/orders";
+  url="https://8080-afeccbdebfffbedeadcfdbdaabaca.examlyiopb.examly.io/orders";
 
   constructor(private http:HttpClient) { }
   
  
-  saveOrders(data:any)
+  addOrder(data:any)
   {
       return this.http.post(this.url,data);
   }

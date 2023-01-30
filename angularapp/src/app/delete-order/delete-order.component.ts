@@ -7,19 +7,17 @@ import { DeleteOrderService } from '../delete-order/delete-order.service';
   templateUrl: './delete-order.component.html',
   styleUrls: ['./delete-order.component.css']
 })
-export class DeleteOrderComponent implements OnInit {
+export class DeleteOrderComponent  {
 
-  constructor(private orderService:DeleteOrderService) { }
+  constructor(private deleteOrderService:DeleteOrderService) { }
 
-  orders:any;
-  ngOnInit(): void {
-  }
+  order:any;
 
-  deleteOrderFormData(id:any)
+
+  deleteOrder()
   {
-    this.orderService.deleteOrders(id).subscribe((result:any)=>{
+    this.deleteOrderService.deleteOrder(this.order).subscribe((result:any)=>{
         console.log(result);
-        location.reload();
         alert("Successfully Deleted");
     });
 

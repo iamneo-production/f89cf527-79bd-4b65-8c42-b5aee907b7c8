@@ -22,9 +22,17 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
 import { HomepageComponent } from './homepage/homepage.component';
 import { AddReviewComponent } from './add-review/add-review.component';
 import { ViewReviewComponent } from './view-review/view-review.component';
+import { AddOrderComponent } from './add-order/add-order.component';
+import { DeleteOrderComponent } from './delete-order/delete-order.component';
+import { ViewOrderComponent } from './view-order/view-order.component';
+import { EditOrderComponent } from './edit-order/edit-order.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { AddCartComponent } from './add-cart/add-cart.component';
 import { ViewCartComponent } from './view-cart/view-cart.component';
+import { EditCartComponent } from './edit-cart/edit-cart.component';
+import { DeleteCartComponent } from './delete-cart/delete-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
@@ -34,8 +42,9 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { ProductReviewComponent } from './product-review/product-review.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
-
+import { CustomerOrderComponent } from './customer-order/customer-order.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -51,15 +60,25 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     HomepageComponent,
     AddReviewComponent,
     ViewReviewComponent,
-   
+    AddOrderComponent,
+    ViewOrderComponent,
+    DeleteOrderComponent,
+    EditOrderComponent,
     AddCartComponent,
     ViewCartComponent,
+    EditCartComponent,
+    DeleteCartComponent,
+    CheckoutComponent,
     DashboardComponent,
     AdminhomepageComponent,
     EditUserComponent,
     DeleteReviewComponent,
     EditReviewComponent,
-    ProductReviewComponent
+    ProductReviewComponent,
+    CustomerOrderComponent,
+    CheckoutComponent,
+    DeleteCartComponent,
+    DeleteUserComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +89,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     FormsModule,
     MatButtonModule,MatToolbarModule,MatCardModule, BrowserAnimationsModule, NgbRatingModule, MatCardModule,
     Ng2SearchPipeModule, MatFormFieldModule,
-    MatButtonModule,MatToolbarModule,MatCardModule,MatIconModule, BrowserAnimationsModule, NgbRatingModule 
+    MatButtonModule,MatToolbarModule,MatCardModule,MatIconModule, BrowserAnimationsModule, NgbRatingModule, 
+    Ng2SearchPipeModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatIconModule, 
+    BrowserAnimationsModule,
+    MatDialogModule, MatInputModule,
+    MatButtonModule,MatToolbarModule,MatCardModule,MatIconModule, BrowserAnimationsModule,MatDialogModule,MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -13,7 +13,6 @@ export class DeleteReviewComponent implements OnInit {
   constructor(private deleteReviewService: DeleteReviewService) { }
 
   ngOnInit(): void {
-
   }
 
   deleteReviews()

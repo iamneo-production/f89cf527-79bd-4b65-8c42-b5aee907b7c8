@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 
@@ -24,39 +25,29 @@ export class EditUserComponent implements OnInit {
   );
 
   constructor(
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private userService: UserService,
     private activatedRoute: ActivatedRoute,
     private router:Router
     ) { 
 
-      activatedRoute.params.subscribe(
-        ()=>{
-          this.userId = this.activatedRoute.snapshot.paramMap.get('id');
-          console.log(this.userId);
       
-          this.getUser();
-        }
-      )
     }
 
   ngOnInit(): void {
 
-  
+    this.setUser();
+
   }
 
-  getUser() {
-    this.userService.getUsers().subscribe(
-      (data: any) => {
+  setUser() {
 
-        this.user = data.find((resuser: any) => resuser.id == this.userId);
+    this.editForm.get('id')!.setValue(this.data.id);
+    this.editForm.get('username')!.setValue(this.data.username);
+    this.editForm.get('email')!.setValue(this.data.email);
+    this.editForm.get('mobilenumber')!.setValue(this.data.mobilenumber);
+    this.editForm.get('password')!.setValue(this.data.password);
 
-        this.editForm.get('id')!.setValue(this.user.id);
-        this.editForm.get('username')!.setValue(this.user.username);
-        this.editForm.get('email')!.setValue(this.user.email);
-        this.editForm.get('mobilenumber')!.setValue(this.user.mobilenumber);
-        this.editForm.get('password')!.setValue(this.user.password);
-      }
-    );
   }
 
   editUser(data: any) {
@@ -66,15 +57,13 @@ export class EditUserComponent implements OnInit {
         this.userService.editUser(data.value).subscribe(
           (data: any) => {
             console.log(data);
-            alert("User successfully udated")
-            this.getUser();
+            alert("User successfully updated")
             this.router.navigate(['users'])
           });
       } else {
         alert("Invalid form, user edit failed");
       }
     }
-
   }
 
 }

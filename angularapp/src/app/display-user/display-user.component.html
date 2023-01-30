@@ -1,37 +1,39 @@
-
- <div class="form-center">
-
-
-    <div class="container">
-        <div class="row">
-         
-          <div class="search-hero">
-              <h1>User Account Information</h1>
-            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Enter Value To Search">
-          
-<table>
-    <tr>
-      <th>Username</th>
-      <th>Email</th>
-      <th>Mobile</th>
-      <th>Operations</th>
-    </tr>
-    <strong></strong>
-    <tr *ngFor="let u of users | filter:searchText">
-      <td>{{u.username}}</td>
-      <td>{{u.email}}</td>
-      <td>{{u.mobilenumber}}</td>
-      <button>Edit</button>
-      <button>Delete</button>
-    </tr>
-  </table>
-</div>
-</div>
-</div>
- 
+<div class="form-center">
 
 
- 
+  <div class="container">
+    <div class="row">
 
-  
-  
+      <div class="search-hero">
+        <h1>User Account Information</h1>
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+          placeholder="Enter Value To Search">
+
+        <br><br>
+        <table class="table">
+          <thead>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col" colspan="2">Operations</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let u of users | filter:searchText">
+              <td>{{u.username}}</td>
+              <td>{{u.email}}</td>
+              <td>{{u.mobilenumber}}</td>
+              <td>
+                <button mat-fab color="primary" class="btn btn-secondary" (click)="editUser(u)">
+                  <mat-icon>edit</mat-icon>
+                </button>
+              </td>
+              <td>
+                <app-delete-user [user]='u'></app-delete-user>
+              </td>
+            </tr>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </div>

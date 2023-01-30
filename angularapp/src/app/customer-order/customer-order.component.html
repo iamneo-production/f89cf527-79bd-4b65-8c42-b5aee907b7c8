@@ -1,0 +1,44 @@
+<div class="container">
+
+  <h1>Orders</h1>
+  <br>
+  <div class="card m-3" *ngFor="let order of orders">
+      <div class="card-header d-flex justify-content-between">
+          <p>Order Number: <span>#{{order.id}}</span></p>
+          <span>Date: {{order.date | date:'fullDate'}}</span>
+      </div>
+      <div class="card-body">
+          <table class="table ">
+            <caption></caption>
+              <thead>
+                  <th>Products</th>
+                  <th>Status</th>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>
+                          <div class="card m-1 p-1" *ngFor="let product of order.products">
+                              <div class="card-body d-flex justify-content-start">
+                                  <img height="100px" width="28%" src="{{product.imageUrl}}" alt="Product image">
+                                  <div class="m-1">
+                                      <span>{{product.name}}</span><br>
+                                      <span>{{product.brand}}</span><br>
+                                      <span>{{product.price | currency:'R'}}</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </td>
+                      <td>
+                          <h2>{{order.status}}</h2>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <div class="card-footer">
+          <span>Items: {{order.products.length | number}}</span><br>
+          <span>Total: {{total | currency:'R'}}</span>
+      </div>
+  </div>
+  <br><br><br><br>
+</div>

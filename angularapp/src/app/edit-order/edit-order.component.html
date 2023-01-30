@@ -7,7 +7,7 @@
     <th>Product Name</th>
     <th>Quantity</th>
     <th>Edit</th>
-    <tr *ngFor="let o of orders">
+    <tr *ngFor="let o of order">
       
       <td><input type="text" value="{{o.id}}" #orderNumber></td>
       <td><input type="text" value="{{o.orderprice}}" #price></td>
@@ -15,7 +15,9 @@
       <td><input type="text" value="{{o.customername}}" #name></td>
       <td><input type="text" value="{{o.productname}}" #productName></td>
       <td><input type="text" value="{{o.quantity}}" #quantity></td>
-      <td><button (click)="editOrderFormData(o.id, orderNumber.value,price.value,date.value,name.value,productName.value,quantity.value)">Update Order</button></td>
+      <td>
+        
+        <button (click)="editOrderFormData(o.id, orderNumber.value,price.value,date.value,name.value,productName.value,quantity.value)">Update Order</button></td>
       
     </tr>
   </table>

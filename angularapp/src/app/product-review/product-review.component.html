@@ -1,7 +1,9 @@
 
 
-<ul *ngIf="">
-  <li>{{reviews.productId}}</li>
-  <li>{{reviews.userId}}</li>
-  <li>{{reviews.rating}}</li>
-  <li>{{reviews.review}}</li>
+  <div class="card" *ngFor = "let review of reviews">
+    <ngb-rating [max]="5" [(rate)]="{{review.date}}" [readonly]="false" [(ngModel)]="rating"></ngb-rating>
+    <p>{{review.date}}</p>
+    <p>{{review.review}}</p>
+
+
+  </div>
