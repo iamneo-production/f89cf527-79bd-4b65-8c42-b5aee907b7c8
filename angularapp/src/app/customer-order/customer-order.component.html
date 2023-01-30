@@ -1,0 +1,16 @@
+<h3><strong>Display Customer Order</strong></h3>
+<div class="customerorder" *ngFor="let order of orders">
+  <div>
+    <div *ngFor="let product of order.products">
+      <div>{{product.id}}</div>
+      <div>{{product.productname}}</div>
+      <div>{{product.productquantity}}</div>
+    </div>
+
+    <p>Processed by: </p>
+  </div>
+  <div>
+    <p>Status:</p>
+    <p>Date:</p>
+  </div>
+</div>

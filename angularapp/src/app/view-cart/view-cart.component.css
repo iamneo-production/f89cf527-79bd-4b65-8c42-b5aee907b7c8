@@ -14,7 +14,7 @@ mat-card{
     border-radius: 10px;
 }
 
-.checkOut{
+#btnCheckout{
     background-color: #658864;
     height: 50px;
 }

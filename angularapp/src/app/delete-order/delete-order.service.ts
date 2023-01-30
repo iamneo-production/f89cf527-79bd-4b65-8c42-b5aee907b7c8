@@ -5,11 +5,11 @@ import {HttpClient} from '@angular/common/http';
 })
 export class DeleteOrderService {
 
-  url="http://localhost:3000/orders";
+  url="https://8080-afeccbdebfffbedeadcfdbdaabaca.examlyiopb.examly.io/orders";
 
   constructor(private http:HttpClient) { }
 
-  deleteOrders(id:number)
+  deleteOrder(id:number)
   {
       return this.http.delete(this.url+"/"+id);
   }

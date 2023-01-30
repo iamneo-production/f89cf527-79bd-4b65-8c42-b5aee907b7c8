@@ -3,13 +3,13 @@ import {HttpClient} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ViewOrderService {
+export class CustomerOrderService {
 
-  url="https://8080-afeccbdebfffbedeadcfdbdaabaca.examlyiopb.examly.io/orders";
+  url="http://localhost:3000/orders";
 
   constructor(private http:HttpClient) { }
-
-  getOrders()
+  
+  CustomerOrder()
   {
     return this.http.get(this.url); 
   }

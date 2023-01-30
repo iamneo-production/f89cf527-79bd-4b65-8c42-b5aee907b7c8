@@ -78,8 +78,7 @@ const routes: Routes = [
   {
     path:'sign-up',
     component: SignupComponent
-  }
-
+  },
 ];
 
 @NgModule({

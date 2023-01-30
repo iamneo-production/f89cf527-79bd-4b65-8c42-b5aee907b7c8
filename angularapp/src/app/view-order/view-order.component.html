@@ -1,13 +1,15 @@
 <h1>Orders</h1>
-<table border="2" id="adminOrderBody">
+<table id="adminOrderBody" class="table table-success table-striped">
+  <thead>
     <th>Order Number</th>
     <th>Order Price</th>
     <th>Order Date</th>
     <th>Customer Name</th>
     <th>Product Name</th>
     <th>Quantity</th>
+  </thead>
+  <tbody>
     <tr *ngFor="let o of orders">
-      
       <td>{{o.ordernumber}}</td>
       <td>{{o.orderprice}}</td>
       <td>{{o.orderdate}}</td>
@@ -15,4 +17,5 @@
       <td>{{o.productname}}</td>
       <td>{{o.quantity}}</td>
     </tr>
-  </table>
+  </tbody>
+</table>
