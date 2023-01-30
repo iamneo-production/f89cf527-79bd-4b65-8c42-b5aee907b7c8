@@ -32,8 +32,9 @@
               <td>
                   <select name="status" id="status" class="form-control" value="{{order.status}}"
                       (blur)="updateOrder(order, status.value)" #status>
-                      <option value="recieved">Recieved</option>
-                      <option value="enroute">En route</option>
+                      <option value="panding">Pending</option>
+                      <option value="picking">Warehouse picking</option>
+                      <option value="intransit">Intransit</option>
                       <option value="delivered">Delivered</option>
                   </select>
               </td>
