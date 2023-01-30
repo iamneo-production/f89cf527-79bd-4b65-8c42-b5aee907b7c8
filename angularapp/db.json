@@ -107,27 +107,18 @@
       "id": 4
     }
   ],
-  "reviews": [    
-    {      
-      "userId":1,      
-      "productId":2,      
-      "rating":5,      
-      "review": "The platform is efficient."    
-      },    
-    {      
-      "userId":2,      
-      "productId":4,      
-      "rating":3,      
-      "review": "Good."    
-      },    
-    {      
-      "userId":3,      
-      "productId":4,      
-      "rating":3,      
-      "review": "Awesome product."  
-      }  
+  
+  "reviews": [
+    {
+      "userId":3,
+      "productId":2,
+      "rating": 3,
+      "review": "Good, Good, Perfect"
+    }
   ],
+
   "orders": [],
+   
   "comments": [
     {
       "id": 1,

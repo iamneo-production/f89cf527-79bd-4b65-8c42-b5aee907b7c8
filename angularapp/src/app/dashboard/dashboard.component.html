@@ -1,6 +1,6 @@
 <div class="card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
     <a href (click)="productInfo()">
-        <img class=" card-img-top" src="{{product.imageURL}}" alt="Product image">
+        <img class=" card-img-top" src="{{product.imageURL}}"  alt="Product image">
     </a>
     
     <div class="card-body" style="text-align: center;">
@@ -9,7 +9,8 @@
         <p class="card-text">{{product.brand}}</p>
         <h4 class="card-text">{{product.price | currency: 'R'}}</h4>
         <app-add-cart [product]='product'></app-add-cart>
-        <!-- <app-prodcut-info [products]='products'></app-product-info> -->
-            </strong>
+    </strong>
+        <!-- <app-product-info [products]='products'></app-product-info> -->
+            
     </div>
 </div>

@@ -25,6 +25,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
+import { Productreview } from './models/productreview.model';
+import { ViewProductService } from './services/view-product.service';
 
 
 @NgModule({
@@ -55,7 +57,9 @@ import { ProductInfoComponent } from './product-info/product-info.component';
     Ng2SearchPipeModule,
     MatButtonModule,MatToolbarModule,MatCardModule,MatIconModule, BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    Productreview,
+    ViewProductService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

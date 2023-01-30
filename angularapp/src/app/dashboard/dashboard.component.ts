@@ -38,7 +38,7 @@ export class DashboardComponent implements OnInit {
   }
 
   productInfo(){
-    this.router.navigate(['admin/product-info'])
+    this.router.navigate(['product-info'])
   }
 
 }
