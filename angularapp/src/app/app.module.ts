@@ -73,7 +73,7 @@ import { AddReviewComponent } from './add-review/add-review.component';
     EditProductComponent,
     ProductReviewComponent,
     ProductInfoComponent,
-    AddReviewComponent,
+    AddReviewComponent
   ],
   imports: [
     BrowserModule,

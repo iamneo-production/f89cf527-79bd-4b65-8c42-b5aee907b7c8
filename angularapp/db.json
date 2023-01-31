@@ -12,8 +12,7 @@
       "username": "admin",
       "email": "admin@lensmart.com",
       "mobilenumber": "0715501164",
-      "password": "admin",
-      "role": "admin"
+      "password": "admin"
     },
     {
       "id": 3,
@@ -37,13 +36,6 @@
       "password": "qwerty",
       "confirmpassword": "qwerty",
       "id": 5
-    },
-    {
-      "email": "test@gmail.com",
-      "username": "Nicolas",
-      "mobileNumber": "08379992627",
-      "password": "Test@123",
-      "id": 102
     },
     {
       "email": "admin@gmail.com",
@@ -148,15 +140,15 @@
     {
       "userId": 3,
       "product": {
-        "id": 2,
-        "name": "Americana 8029",
-        "brand": "Femina",
-        "price": 2000,
-        "description": "Glass2 glass desc",
-        "imageURL": "https://www.torgaoptical.co.za/images/thumbs/0733277_americana-8029_750.jpeg",
-        "quantity": 10
+        "id": 1,
+        "name": "Femina 6050",
+        "brand": "Americana",
+        "price": "1250",
+        "description": "Glass1 glass desc",
+        "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1481723_femina-6050_750.jpeg",
+        "quantity": 9
       },
-      "id": 24
+      "id": 1
     }
   ],
   "orders": [
@@ -194,15 +186,66 @@
         }
       ],
       "id": 1
+    },
+    {
+      "userId": 3,
+      "date": "2023-01-31T14:38:12.668Z",
+      "status": "pending",
+      "products": [
+        {
+          "id": 2,
+          "name": "Americana 8029",
+          "brand": "Femina",
+          "price": 2000,
+          "description": "Glass2 glass desc",
+          "imageURL": "https://www.torgaoptical.co.za/images/thumbs/0733277_americana-8029_750.jpeg",
+          "quantity": 10
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userId": 3,
+      "date": "2023-01-31T14:38:25.777Z",
+      "status": "pending",
+      "products": [
+        {
+          "id": 2,
+          "name": "Americana 8029",
+          "brand": "Femina",
+          "price": 2000,
+          "description": "Glass2 glass desc",
+          "imageURL": "https://www.torgaoptical.co.za/images/thumbs/0733277_americana-8029_750.jpeg",
+          "quantity": 10
+        }
+      ],
+      "id": 3
+    },
+    {
+      "userId": 3,
+      "date": "2023-01-31T14:44:41.667Z",
+      "status": "delivered",
+      "products": [
+        {
+          "id": 1,
+          "name": "Femina 6050",
+          "brand": "Americana",
+          "price": "1250",
+          "description": "Glass1 glass desc",
+          "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1481723_femina-6050_750.jpeg",
+          "quantity": 9
+        }
+      ],
+      "id": 4
     }
   ],
   "reviews": [
     {
-      "userId":1,
-      "productId":2,
-      "date":"2023-01-30T12:59:50.792Z",
-      "rating":5,
-      "review":"The platform is efficient"
+      "userId": 1,
+      "productId": 2,
+      "date": "2023-01-30T12:59:50.792Z",
+      "rating": 5,
+      "review": "The platform is efficient"
     }
   ],
   "comments": [
