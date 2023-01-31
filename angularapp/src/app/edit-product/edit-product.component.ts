@@ -49,6 +49,30 @@ export class EditProductComponent {
           this.editForm.get('quantity')!.setValue(this.data.quantity);
     }
 
+    // ---------
+    get name(){
+      return this.editForm.get('name');
+    }
+    get brand(){
+      return this.editForm.get('brand');
+    }
+  
+    get description(){
+      return this.editForm.get('description');
+    }
+  
+    get imageURL(){
+      return this.editForm.get('imageURL');
+    }
+  
+    get price(){
+      return this.editForm.get('price');
+    }
+  
+    get quantity(){
+      return this.editForm.get('quantity');
+    }
+// -------------
     editProduct(data:any){
       console.log(data.value);
       if (confirm("Are you sure you want to submit changes?")) {

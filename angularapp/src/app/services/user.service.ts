@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
 
-  url = "https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/users";
+  url = "https://8080-dadadbcdabbdffbedeadcfdbdaabaca.examlyiopb.examly.io/users";
 
   
 

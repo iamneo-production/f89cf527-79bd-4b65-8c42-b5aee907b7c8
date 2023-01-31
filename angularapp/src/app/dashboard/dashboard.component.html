@@ -9,7 +9,9 @@
             <p class="card-text">{{product.brand}}</p>
             <h4 class="card-text">{{product.price | currency:'R'}}</h4>
         </strong>
-            <app-add-cart [product]='product'></app-add-cart>
+            <app-add-cart [product]='product'>
+                
+            </app-add-cart>
             <!-- <app-product-info [products]='products'></app-product-info> -->
 
         </div>

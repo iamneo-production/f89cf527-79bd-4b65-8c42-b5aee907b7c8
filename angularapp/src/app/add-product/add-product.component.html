@@ -8,6 +8,7 @@
       <span style="color:red;" *ngIf="name && name.invalid&& name.touched">
         Please enter product name
       </span>
+      <br>
     </div>
     <div class="form-outline mb-3">
       <label for="description">Product Description:</label>
@@ -16,14 +17,16 @@
       <span style="color:red;" *ngIf="description && description.invalid&& description.touched">
         Please enter product Description
       </span>
+      <br>
     </div>
     <div class="form-outline mb-3">
       <label for="price">Product Price:</label>
-      <input type="text" ngModel id="price" name="price" formControlName="price"
+      <input type="number" ngModel id="price" name="price" formControlName="price"
         class="form-control form-control" />
       <span style="color:red;" *ngIf="price && price.invalid&& price.touched">
         Please enter Product price
       </span>
+      <br>
     </div>
     <div class="form-outline mb-3">
       <label for="imageURL">Image Url:</label>
@@ -32,6 +35,7 @@
       <span style="color:red;" *ngIf="imageURL && imageURL.invalid&& imageURL.touched">
         Enter the Image Url
       </span>
+      <br>
     </div>
 
     <div class="form-outline mb-3">
@@ -41,6 +45,7 @@
       <span style="color:red;" *ngIf="quantity && quantity.invalid&& quantity.touched">
         This field is Invalid
       </span>
+      <br>
     </div>
 
 

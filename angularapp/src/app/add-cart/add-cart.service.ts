@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class AddCartService {
 
-  url = "https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/carts"
+  url = "https://8080-dadadbcdabbdffbedeadcfdbdaabaca.examlyiopb.examly.io/carts"
 
   constructor(private http:HttpClient) { }
 

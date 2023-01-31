@@ -33,6 +33,7 @@ export class ViewCartComponent implements OnInit {
         next.forEach((element:any) => {
           this.total += parseInt(element.product.price)
         });
+        
     
       }
     )

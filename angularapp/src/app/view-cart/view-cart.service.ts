@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class ViewCartService {
 
-  url = "https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/carts"
+  url = "https://8080-dadadbcdabbdffbedeadcfdbdaabaca.examlyiopb.examly.io/carts"
 
   constructor(private http:HttpClient, private router:Router) { 
 

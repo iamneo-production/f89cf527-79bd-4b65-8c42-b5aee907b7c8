@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class AddReviewService {
 
-  url = "https://8080-ebffcadbcbffbedeadcfdbdaabaca.examlyiopb.examly.io/reviews";
+  url = "https://8080-dadadbcdabbdffbedeadcfdbdaabaca.examlyiopb.examly.io/reviews";
 
   constructor(private http:HttpClient) { }
 
