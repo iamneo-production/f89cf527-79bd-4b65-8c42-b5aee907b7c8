@@ -30,6 +30,7 @@ export class AddProductComponent {
 
   addProductForm = new FormGroup({
     name: new FormControl('',[Validators.required]),
+    brand: new FormControl('',[Validators.required]),
     description: new FormControl('',[Validators.required]),
     price: new FormControl('',[Validators.required]),
     imageURL: new FormControl('',[Validators.required]),
@@ -38,6 +39,10 @@ export class AddProductComponent {
 
   get name(){
     return this.addProductForm.get('name');
+  }
+
+  get brand(){
+    return this.addProductForm.get('brand');
   }
 
   get description(){

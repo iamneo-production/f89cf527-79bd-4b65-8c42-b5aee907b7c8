@@ -1,36 +1,35 @@
-
 <section class="vh-100" style="background-color: #658864;">
-    <div class="container py-5 h-100">
-        <div class="card" style="border-radius: 1rem;">
-            <div class="row g-0">
-                <div class="card-body p-4 p-lg-5 text-black">
-  
-                  <form>
-                      
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">User Id</th>
-      <th scope="col">Product Id</th>
-      <th scope="col">Rating</th>
-      <th scope="col">Review</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor = "let reviews of reviews; index as i">
-      <th scope="row">{{i+1}}</th>
-      <td>{{reviews.userId}}</td>
-      <td>{{reviews.productId}}</td>
-      <td>{{reviews.rating}}</td>
-      <td>{{reviews.review}}</td>
-    </tr>
-    </tbody>
-</table>
-                    </form>
-  
-                </div>
-            </div>
-          </div>
+  <div class="container py-5 h-100">
+    <div class="card" style="border-radius: 1rem;">
+      <div class="row g-0">
+        <div class="card-body p-4 p-lg-5 text-black">
+
+          <form>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">User Id</th>
+                  <th scope="col">Product Id</th>
+                  <th scope="col">Rating</th>
+                  <th scope="col">Review</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let reviews of reviews; index as i">
+                  <th scope="row">{{i+1}}</th>
+                  <td>{{reviews.userId}}</td>
+                  <td>{{reviews.productId}}</td>
+                  <td>{{reviews.rating}}</td>
+                  <td>{{reviews.review}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>

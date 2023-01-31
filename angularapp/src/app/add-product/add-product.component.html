@@ -1,18 +1,26 @@
 <div class="card-body p-1">
   <h3 class="text-center mb-2">Add new product</h3>
-  <form [formGroup]="addProductForm" (ngSubmit)="addProduct(addProductForm.value)">
+  <form [formGroup]="addProductForm" (ngSubmit)="addProduct(addProductForm.value)" id="addProductBody">
     <div class="form-outline mb-3">
       <label for="name">Product name:</label>
-      <input type="text" id="name" ngModel name="name" formControlName="name"
+      <input type="text" id="productName" ngModel name="name" formControlName="name"
         class="form-control form-control" />
       <span style="color:red;" *ngIf="name && name.invalid&& name.touched">
         Please enter product name
       </span>
       <br>
+      <div class="form-outline mb-3">
+        <label for="brand">Product brand:</label>
+        <input type="text" id="productBrand" ngModel name="brand" formControlName="brand"
+          class="form-control form-control" />
+        <span style="color:red;" *ngIf="brand && brand.invalid&& brand.touched">
+          Please enter product brand
+        </span>
+        <br>
     </div>
     <div class="form-outline mb-3">
       <label for="description">Product Description:</label>
-      <input type="text" id="description" ngModel name="description"
+      <input type="text" id="productDescription" ngModel name="description"
         formControlName="description" class="form-control form-control" />
       <span style="color:red;" *ngIf="description && description.invalid&& description.touched">
         Please enter product Description
@@ -30,7 +38,7 @@
     </div>
     <div class="form-outline mb-3">
       <label for="imageURL">Image Url:</label>
-      <input type="text" ngModel id="imageURL" name="imageURL"
+      <input type="text" ngModel id="productImageURL" name="imageURL"
         formControlName="imageURL" class="form-control form-control" />
       <span style="color:red;" *ngIf="imageURL && imageURL.invalid&& imageURL.touched">
         Enter the Image Url
@@ -40,7 +48,7 @@
 
     <div class="form-outline mb-3">
       <label for="description">Product Quantity:</label>
-      <input type="number" ngModel id="quantity" name="quantity"
+      <input type="number" ngModel id="productQuantity" name="quantity"
         formControlName="quantity" class="form-control form-control" />
       <span style="color:red;" *ngIf="quantity && quantity.invalid&& quantity.touched">
         This field is Invalid

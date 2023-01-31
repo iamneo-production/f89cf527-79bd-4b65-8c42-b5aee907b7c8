@@ -1,8 +1,9 @@
-<div class="container">
+<div id="productHomeBody">
     <div class="card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
-        <a href (click)="productInfo()">
-        <img class=" card-img-top" src="{{product.imageURL}}" alt="Product image">
-        </a>
+
+        <img class="card-img-top" src="{{product.imageURL}}" alt="Product image" (click)="productInfo(product)">
+
+
         <div class="card-body">
             <strong>
             <h3 class="card-title">{{product.name}}</h3>
@@ -15,5 +16,5 @@
             <!-- <app-product-info [products]='products'></app-product-info> -->
 
         </div>
-    </div>
+    </div>>
 </div>

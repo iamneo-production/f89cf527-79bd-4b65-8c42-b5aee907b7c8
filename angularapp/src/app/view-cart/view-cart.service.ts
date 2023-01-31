@@ -15,6 +15,7 @@ export class ViewCartService {
   }
 
   getCart(){
+    
     let user = JSON.parse(localStorage.getItem("loggedUser"));
     return this.http.get(this.url+"/?userId="+user.id)
   }

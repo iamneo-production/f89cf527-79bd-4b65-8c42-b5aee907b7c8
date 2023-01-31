@@ -1,0 +1,6 @@
+<div class="card m-2 p-2" *ngFor="let review of reviews">
+  <p>Rating: {{review.rating}}</p>
+  <p>{{review.date | date:'fullDate'}}</p>
+ <br>
+  <p>{{review.review}}</p> 
+</div>

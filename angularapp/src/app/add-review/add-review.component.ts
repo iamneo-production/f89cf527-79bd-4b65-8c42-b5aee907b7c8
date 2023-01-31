@@ -18,30 +18,30 @@ export class AddReviewComponent implements OnInit {
 
   constructor(private addReviewService:AddReviewService){}
 
-  ngOnInit():void
-  {}
+  ngOnInit():void{
+    
+  }
 
   rating:number = 0;
   review:string = '';
+  date=Date();
 
-  productRating = {
-    userid : this.user.id,
-    productId: this.product.id,
-    rating : this.rating,
-    review: this.review
-  }
-
-  
-  
   currentRate = 0;
 
+  
   addRating(){
     alert(this.rating +" "+ this.review)
 
-    this.addReviewService.addReviews(this.productRating).subscribe(
+    let productRating = {
+      userid : this.user.id,
+      productId: this.product.id,
+      rating : this.rating,
+      review: this.review
+    }
+
+    this.addReviewService.addReviews(productRating).subscribe(
       (next:any)=> {
         console.log(next);
-        
       }
     )
     

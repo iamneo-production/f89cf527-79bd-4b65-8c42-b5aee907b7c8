@@ -24,6 +24,7 @@
                 <td>
                     {{ product.name }}
                 </td>
+                <td>{{ product.brand }}</td>
                 <td>{{ product.description }}</td>
                 <td>{{ product.price | currency:'R'}}</td>
                 <td>{{ product.quantity | number }}</td>
@@ -31,8 +32,6 @@
                     <button mat-fab color="primary" (click)="openEditDialog(product)">
                         <mat-icon>edit</mat-icon>
                     </button>
-
-                    <!-- <button class="btn btn-secondary" (click)="openEditDialog(product)">Edit</button> -->
 
                 </td>
                 <td><app-delete-product [product]="product" ></app-delete-product></td>

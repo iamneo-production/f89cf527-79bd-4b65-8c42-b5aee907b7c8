@@ -78,7 +78,7 @@ export class EditProductComponent {
       if (confirm("Are you sure you want to submit changes?")) {
         if (this.editForm.valid) {
           this.editproductService.editProduct(data.value).subscribe(
-            (data: any) => {
+            (data:any) => {
               console.log(data);
               alert("Product successfully updated")
               location.reload()

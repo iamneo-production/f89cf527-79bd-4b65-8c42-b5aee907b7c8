@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AddReviewComponent } from '../add-review/add-review.component';
 import { Productreview } from '../models/productreview.model';
 import { ViewProductService } from '../services/view-product.service';
 
@@ -8,21 +11,23 @@ import { ViewProductService } from '../services/view-product.service';
   styleUrls: ['./product-info.component.css']
 })
 export class ProductInfoComponent{
-  Id: any;
-  productId:any;
-  products:any;
+
+  product:any;
   
-  constructor(public productModel: Productreview, public viewproductService: ViewProductService) {
-    viewproductService.products().subscribe((data:any)=>
-    {
-      this.products=data;
+  constructor(private router:Router, activatedRoute:ActivatedRoute, private dialog:MatDialog ) {
+
+    this.product = activatedRoute.snapshot.queryParams;
+    console.log(this.product);
+  }
+
+
+    openDialog(): void {
+      const dialogRef = this.dialog.open(AddReviewComponent);
   
-    })
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');
+      });
   }
-  searchProduct(id){
-    this.productId=this.Id;
-    this.productModel.allreviews=[];
-    this.productModel.getReviews(this.Id);
-  }
+
     
 }
