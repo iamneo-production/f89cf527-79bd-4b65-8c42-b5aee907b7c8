@@ -3,6 +3,7 @@ import { ViewCartService } from './view-cart.service';
 import { Cart } from "../models/cart";
 import { Router } from '@angular/router';
 import { AddOrderService } from '../add-order/add-order.service';
+import { DeleteCartService } from '../services/delete-cart.service';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class ViewCartComponent implements OnInit {
 
   constructor(
     private viewCartService: ViewCartService,
+    private deleteCartService:DeleteCartService,
     private router:Router,
     private addOrderService:AddOrderService
     ) {
@@ -50,12 +52,21 @@ export class ViewCartComponent implements OnInit {
       status: "pending",
       products:this.getCartProducts()
     }
+
+    this.carts.forEach((element)=> {
+      this.removeItem(element);
+    })
+
     this.addOrderService.addOrder(order).subscribe(
       (next:any)=>{
         console.log(next);
       }
     )
     this.router.navigate(['home/orders']);
+  }
+
+  removeItem(cp:any){
+    this.deleteCartService.deleteCart(cp.id).subscribe();
   }
 
   getCartProducts(): any[] {

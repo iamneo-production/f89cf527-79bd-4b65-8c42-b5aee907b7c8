@@ -26,7 +26,7 @@ export class CustomerOrderComponent implements OnInit {
       this.orders = result;
       this.orders.forEach((order:any) => {
         order.products.forEach((product:any) => {
-          this.total += product.price
+          this.total += parseInt(product.price)
         });
       });
     
