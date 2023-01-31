@@ -1,16 +1,69 @@
-<div class="container">
-    <div>
-        <img src="{{product.imageURL}}" alt="productImage">
+<section style="background-color: #eee;">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md-5">
+                <div class="card mb-4">
+                    <div class="card-body text-center">
+                        <img src="{{product.imageURL}}" alt="avatar" class="rounded-circle img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-7">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Product name</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">{{product.name}}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Brand</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">{{product.brand}}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Price</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">{{product.price | currency:'R'}}</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="mb-0">Description</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <p class="text-muted mb-0">{{product.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-4">
+                    <br>
+                    <h2 class="text-center">Product reviews</h2>
+                    <br>
+                    <div class="card-body">
+                        <app-product-review [product]="product"></app-product-review>
+                    </div>
+                    <br>
+                    <button class="btn btn-secondary btn-md m-3" (click)="openDialog()" style="width: 200px; margin:10px">Add review</button>
+                    <br>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <span>{{product.name}}</span><br>
-        <span>{{product.brand}}</span><br>
-        <span>{{product.price}}</span><br>
-        <span>{{product.description}}</span>
-    </div>
-    <hr>
-    <button>Add review</button>
-    <app-product-review [product]="product"></app-product-review>
-    <br>
-    <br>
-</div>
+</section>
