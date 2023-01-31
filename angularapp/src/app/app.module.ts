@@ -47,6 +47,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { ProductReviewComponent } from './product-review/product-review.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
+import { ProfileComponent } from './profile/profile.component';
+import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -83,7 +85,8 @@ import { ProductInfoComponent } from './product-info/product-info.component';
     DeleteUserComponent,
     EditProductComponent,
     ProductReviewComponent,
-    ProductInfoComponent
+    ProductInfoComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

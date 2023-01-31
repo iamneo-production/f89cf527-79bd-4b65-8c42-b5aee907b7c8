@@ -6,12 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class DeleteCartService {
   
-  url = "https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/carts";
+  url = "https://8080-ebffcadbcbffbedeadcfdbdaabaca.examlyiopb.examly.io/carts";
 
   constructor(private http:HttpClient) { }
   
-  deleteCart(data:any)
+  deleteCart(id:any)
   {
-    return this.http.delete(this.url+"/"+data.id);
+    return this.http.delete(this.url+"/"+id);
   }
 }

@@ -8,14 +8,14 @@ import { Router } from '@angular/router';
 })
 export class ViewCartService {
 
-  url = "https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/carts"
+  url = "https://8080-ebffcadbcbffbedeadcfdbdaabaca.examlyiopb.examly.io//carts"
 
   constructor(private http:HttpClient, private router:Router) { 
 
   }
 
   getCart(){
-    return this.http.get(this.url)
+    
     let user = JSON.parse(localStorage.getItem("loggedUser"));
     return this.http.get(this.url+"/?userId="+user.id)
   }

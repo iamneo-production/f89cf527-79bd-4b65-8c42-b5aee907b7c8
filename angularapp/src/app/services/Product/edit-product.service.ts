@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class EditProductService {
   
-  url = "https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/products";
+  url = "https://8080-ebffcadbcbffbedeadcfdbdaabaca.examlyiopb.examly.io/products";
 
   
 

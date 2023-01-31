@@ -65,11 +65,10 @@ export class CheckoutComponent implements OnInit {
     submitOrder(){
 
     let order:any = {
-      userId:JSON.parse(localStorage.getItem('loggedUser') || "{'loggedUser':null}").id,
+      userId: JSON.parse(localStorage.getItem('loggedUser') || "{'loggedUser':null}").id,
       date: new Date(),
       status: "pending",
       products: this.products
-
     }
 
     this.orderService.addOrder(order).subscribe(

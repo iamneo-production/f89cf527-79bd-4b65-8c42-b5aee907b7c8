@@ -1,4 +1,4 @@
-<mat-toolbar class="navbar" id="userNavbar">
+<mat-toolbar class="navbar" id="userNavbar" style="background-color: #658864; color: white;">
     <button mat-button routerLink="">
         <h2>Lens Mart</h2>
     </button>
@@ -7,12 +7,16 @@
     <button mat-button id="productCardButton" routerLink="cart">Cart</button>
     <button mat-button id="productOrderButton" routerLink="orders">Orders</button>
     <span class="example-spacer"></span>
-
+    <button mat-icon-button routerLink="profile">
+        <mat-icon>account_circle</mat-icon>
+    </button>
     <button id="logoutButton" mat-raised-button class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon" (click)="logOut()">
         <span>Logout</span>
     </button>
 </mat-toolbar>
 <br><br>
-<router-outlet></router-outlet>
+
+<router-outlet></router-outlet><br>
+
 

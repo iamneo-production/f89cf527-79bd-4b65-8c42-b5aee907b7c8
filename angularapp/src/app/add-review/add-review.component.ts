@@ -5,6 +5,7 @@ import { NgbRatingConfig, NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
+
 @Component({
   selector: 'app-add-review',
   templateUrl: './add-review.component.html',
@@ -17,9 +18,11 @@ export class AddReviewComponent implements OnInit {
   @Input() user:any = {};
 
   constructor(private addReviewService:AddReviewService){}
+  
 
-  ngOnInit():void
-  {}
+  ngOnInit():void{
+    
+  }
 
   rating:number = 0;
   review:string = '';
@@ -27,21 +30,20 @@ export class AddReviewComponent implements OnInit {
 
   currentRate = 0;
 
-  productRating = {
-    userid : this.user.id,
-    productId: this.product.id,
-    rating : this.rating,
-    review: this.review
-  }
-
   
   addRating(){
     alert(this.rating +" "+ this.review)
 
-    this.addReviewService.addReviews(this.productRating).subscribe(
+    let productRating = {
+      userid : this.user.id,
+      productId: this.product.id,
+      rating : this.rating,
+      review: this.review
+    }
+
+    this.addReviewService.addReviews(productRating).subscribe(
       (next:any)=> {
         console.log(next);
-        
       }
     )
     
