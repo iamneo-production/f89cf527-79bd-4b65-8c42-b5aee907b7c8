@@ -7,7 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export class LoginService {
 
   users:any;
-  url:string = "https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/users"
+  url:string = "https://8080-afeccbdebfffbedeadcfdbdaabaca.examlyiopb.examly.io/users"
   
   constructor(private http:HttpClient){}
 
