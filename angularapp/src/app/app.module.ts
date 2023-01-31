@@ -42,6 +42,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
 import { ProductReviewComponent } from './product-review/product-review.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { AddReviewComponent } from './add-review/add-review.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { AddReviewComponent } from './add-review/add-review.component';
     EditProductComponent,
     ProductReviewComponent,
     ProductInfoComponent,
-    AddReviewComponent
+    AddReviewComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

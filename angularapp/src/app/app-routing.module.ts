@@ -11,6 +11,7 @@ import { AdminGuard } from './guards/admin.guard';
 import { AuthGuardGuard } from './guards/auth-guard.guard';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
+import { ProfileComponent } from './profile/profile.component';
 import { ViewCartComponent } from './view-cart/view-cart.component';
 import { ViewOrderComponent } from './view-order/view-order.component';
 import { ViewProductComponent } from './view-product/view-product.component';
@@ -52,6 +53,11 @@ const routes: Routes = [
       {
         path:'orders',
         component:CustomerOrderComponent,
+        canActivate:[AuthGuardGuard]
+      },
+      {
+        path:'profile',
+        component:ProfileComponent,
         canActivate:[AuthGuardGuard]
       },
     ]
