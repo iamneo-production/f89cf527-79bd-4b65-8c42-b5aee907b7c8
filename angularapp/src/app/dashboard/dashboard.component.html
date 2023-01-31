@@ -1,3 +1,4 @@
+<app-counsel></app-counsel>
 <div id="productHomeBody">
 <div class="card" *ngFor="let product of products, index as i" id="grid{{i+1}}">
     <img class=" card-img-top" src="{{product.imageURL}}" alt="Product image">
@@ -7,5 +8,6 @@
         <h4 class="card-text">{{product.price | currency:'R'}}</h4>
         <app-add-cart [product]='product'></app-add-cart>
     </div>
-</div>>
 </div>
+</div>
+

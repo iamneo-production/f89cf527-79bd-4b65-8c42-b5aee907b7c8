@@ -41,6 +41,7 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { FooterComponent } from './footer/footer.component';
+import { CounselComponent } from './counsel/counsel.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { FooterComponent } from './footer/footer.component';
     DeleteCartComponent,
     DeleteUserComponent,
     EditProductComponent,
-    FooterComponent
+    FooterComponent,
+    CounselComponent
   ],
   imports: [
     BrowserModule,
