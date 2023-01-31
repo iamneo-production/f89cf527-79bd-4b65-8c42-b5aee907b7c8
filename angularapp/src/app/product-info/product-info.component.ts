@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Productreview } from '../models/productreview.model';
 import { ViewProductService } from '../services/view-product.service';
 
 @Component({
@@ -8,14 +10,15 @@ import { ViewProductService } from '../services/view-product.service';
 })
 export class ProductInfoComponent{
 
-  products:any;
-  constructor(private viewproductService: ViewProductService) {
-    viewproductService.products().subscribe((data:any)=>
-    {
-      this.products=data;
-    })
-   }
+  product:any;
+  
+  constructor(private router:Router, activatedRoute:ActivatedRoute ) {
 
+    this.product = activatedRoute.snapshot.queryParams;
+    console.log(this.product);
+    
+    
+  }
 
-
+    
 }

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ViewProductService {
-  url="https://8080-adddbbadcceecfffbedeadcfdbdaabaca.examlyiopb.examly.io/products";
+  url="https://8080-ebffcadbcbffbedeadcfdbdaabaca.examlyiopb.examly.io/products";
 
   constructor(private http:HttpClient) { }
   products()

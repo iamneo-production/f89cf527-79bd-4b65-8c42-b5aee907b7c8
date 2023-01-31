@@ -39,12 +39,14 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { DeleteReviewComponent } from './delete-review/delete-review.component';
 import { EditReviewComponent } from './edit-review/edit-review.component';
 import { DeleteUserComponent } from './delete-user/delete-user.component';
-import { ProductReviewComponent } from './product-review/product-review.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CustomerOrderComponent } from './customer-order/customer-order.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { EditProductComponent } from './edit-product/edit-product.component';
+import { ProductReviewComponent } from './product-review/product-review.component';
+import { ProductInfoComponent } from './product-info/product-info.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,10 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     CustomerOrderComponent,
     CheckoutComponent,
     DeleteCartComponent,
-    DeleteUserComponent
+    DeleteUserComponent,
+    EditProductComponent,
+    ProductReviewComponent,
+    ProductInfoComponent
   ],
   imports: [
     BrowserModule,

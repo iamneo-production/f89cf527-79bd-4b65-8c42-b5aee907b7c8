@@ -11,8 +11,9 @@ import { ProductReviewService } from '../services/product-review.service';
 export class ProductReviewComponent implements OnInit {
 
 
-  @Input() product:any;
+  @Input() product:any = {};
   reviews:any[]=[];
+  rating:any;
 
   constructor(private productReviewService:ProductReviewService) { }
 
@@ -25,6 +26,7 @@ export class ProductReviewComponent implements OnInit {
     this.productReviewService.getReviews(this.product.id).subscribe(
       (next:any)=>{
         console.log(next);
+        this.reviews = next
         
       }
     )

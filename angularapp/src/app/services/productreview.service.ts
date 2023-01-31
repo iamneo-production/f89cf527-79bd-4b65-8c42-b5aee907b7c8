@@ -1,25 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-
 @Injectable({
   providedIn: 'root'
 })
-export class AddReviewService {
+export class ProductreviewService {
 
   url = "https://8080-ebffcadbcbffbedeadcfdbdaabaca.examlyiopb.examly.io/reviews";
 
-  constructor(private http:HttpClient) { }
+  constructor(public http:HttpClient) { }
 
-  
-  addReviews(data:any)
-  {
-    return this.http.post(this.url, data.id);
+  public getData(){
+    return this.http.get(this.url);
   }
-
-  alert("Review submitted.");
-  
 }
- 
-
- 
