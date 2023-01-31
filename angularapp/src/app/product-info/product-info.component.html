@@ -38,3 +38,49 @@
 
 
 <h1>This page works</h1>
+
+
+
+<!-- <div class="search">
+    <input type="text" placeholder="Search.." [(ngModel)]="Id">
+    <button (click)="searchProduct(Id)">Go</button>
+</div> -->
+<div class="prod-body clear-float">
+    <div *ngIf="productModel.product.productId == productId ;">
+        <div class="productDetails">
+            <div class="prod-img">
+                <img src="{{productModel.product.productId}}.jpg" alt="{{Productreview.product.name}}">
+            </div>
+            <div class="prod-about">
+                <h1>{{productModel.product.name}}</h1>
+                <h3>Product Details: </h3>
+                <p>{{productModel.product.description}}</p>
+            </div>
+        </div>
+        <div class="clear-float"></div>
+        <table class="reviewTable">
+            <tr>
+                <th class="header">POSITIVE</th>
+            </tr>
+            <tr *ngFor="let review of productModel.allReviews">
+                <div class="margin-top">
+                    <td>
+                        <div class="float-left">
+                            <div class="stars pos-stars">{{review.ratings}}
+                                <span>&#9733;</span>
+                            </div>
+                            <div class="titles float-left">
+                                <b>{{review.email}}</b>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="description clear-float">{{review.description}}</div>
+                            <!-- <div class="reviewer"> {{review.reviewerName}}</div> -->
+                            <!-- <div class="date float-left"> {{review.date}}</div> -->
+                        </div>
+                    </td>
+                </div>
+            </tr>
+        </table>
+
+    </div>

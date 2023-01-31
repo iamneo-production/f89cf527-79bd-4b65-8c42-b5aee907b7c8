@@ -24,6 +24,10 @@ export class CheckoutComponent implements OnInit {
   
   }
 
+  ngOnInit(): void {
+    
+  }
+
   
   
   checkoutForm =new FormGroup(
@@ -53,16 +57,6 @@ export class CheckoutComponent implements OnInit {
  }
 
 
-  ngOnInit(): void {
-    
-    this.cartProducts.forEach(element => {
-      this.products.push(element.product)
-    });
-    
-  }
-  
-
-  
   payment() {
     
     this.router.navigate(['home/orders']);

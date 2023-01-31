@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AddProductService } from '../services/Product/add-product.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -35,11 +35,11 @@ export class AddProductComponent {
   }
 
   addProductForm = new FormGroup({
-    name: new FormControl(''),
-    description: new FormControl(''),
-    price: new FormControl(''),
-    imageURL: new FormControl(''),
-    quantity: new FormControl(''),
+    name: new FormControl('', [Validators.required, Validators.pattern('[A-Z a-z]+$')]),
+    description: new FormControl('',[Validators.required, Validators.pattern('[A-Z a-z]+$')]),
+    price: new FormControl('',[Validators.required, Validators.minLength(1), Validators.maxLength(6)]),
+    imageURL: new FormControl('',[Validators.required]),
+    quantity: new FormControl('',[Validators.required, Validators.minLength(1), Validators.maxLength(5)])
   })
 
   get name(){

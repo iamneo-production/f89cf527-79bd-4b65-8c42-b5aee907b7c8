@@ -1,4 +1,4 @@
-<!-- <section class="vw-100" style="background-color: #658864;">
+<section class="vw-100" style="background-color: #658864;">
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col col-xl-10">
@@ -15,6 +15,16 @@
                     <div class="d-flex align-items-center mb-3 pb-1">
                       <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                       <span class="h1 fw-bold mb-0">Sign Up</span>
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="text" placeholder="Enter First Name" name="firstname" formControlName="firstname" id="firstname"
+                        class="form-control form-control-lg">
+                      <span style="color: red;" *ngIf="firstname && firstname.invalid && firstname.touched">Invalid Firstname</span>
+                    </div>
+                    <div class="form-outline mb-4">
+                      <input type="text" placeholder="Enter Last Name" name="lastname" formControlName="lastname" id="lastname"
+                        class="form-control form-control-lg">
+                      <span style="color: red;" *ngIf="lastname && lastname.invalid && lastname.touched">Invalid Lastname</span>
                     </div>
                     <div class="form-outline mb-4">
                       <input type="text" placeholder="Enter Email" name="email" formControlName="email" id="email"
@@ -40,17 +50,17 @@
                         Passsword</span>
                     </div>
                     <div class="form-outline mb-4">
-                      <input type="password" placeholder="Confirm Password" name="confirmpassword" id="confirmpassword"
+                      <input type="password" placeholder="Confirm Password" name="confirmpassword" id="confirmPassword"
                         formControlName="confirmpassword" class="form-control form-control-lg">
                       <span style="color: red;"
                         *ngIf="confirmpassword && confirmpassword.invalid && confirmpassword.touched">Invalid
                         Passsword</span>
                     </div>
+                    <textarea rows="3" cols="50"></textarea>
                    
                       <input class="btn btn-dark btn-lg btn-block" type="submit" value="Submit" id="submitButton">
                       <br>
-                    
-                    <a class="small text-muted" href="#!">Forgot password?</a>
+                  
                     <p class="mb-5 pb-lg-2" style="color: #393f81;" id="signinLink">Already a user? <a (click)="navigateLogin()"
                         style="color: #393f81;">Login</a></p>
                   </form>
@@ -62,8 +72,8 @@
         </div>
       </div>
     </div>
-  </section> -->
-  <mat-stepper [linear]="false" #stepper>
+  </section>
+  <!-- <mat-stepper [linear]="false" #stepper>
     <mat-step [stepControl]="detailsForm">
       <form [formGroup]="detailsForm">
         <ng-template matStepLabel>Fill out your name</ng-template>
@@ -97,4 +107,4 @@
         <button mat-button >Reset</button>
       </div>
     </mat-step>
-  </mat-stepper>
+  </mat-stepper> -->

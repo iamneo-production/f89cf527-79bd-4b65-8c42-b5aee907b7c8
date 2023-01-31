@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../services/login/login.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 
@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent implements OnInit {
   users: any;
-  constructor(private userService: LoginService, private router: Router) {
+  constructor(private userService: LoginService, private router: Router,private snackBar:MatSnackBar) {
     userService.getUsers().subscribe((data: any) => {
       console.log(data);
       this.users = data;
@@ -23,6 +23,8 @@ export class SignupComponent implements OnInit {
 
   signupForm = new FormGroup(
     {
+      firstname: new FormControl('', [Validators.required, Validators.pattern('[A-Z a-z]+$')]),
+      lastname: new FormControl('', [Validators.required, Validators.pattern('[A-Z a-z]+$')]),
       email: new FormControl('', [Validators.required, Validators.email]),
       username: new FormControl('', [Validators.required, Validators.pattern('[A-Z a-z]+$')]),
       mobilenumber: new FormControl('', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
@@ -32,17 +34,7 @@ export class SignupComponent implements OnInit {
 
     });
 
-    detailsForm = new FormGroup(
-      {
-        name:new FormControl('')
-      }
-    );
-
-    addressForm = new FormGroup(
-      {
-        city:new FormControl('')
-      }
-    );
+ 
 
 
 
@@ -54,7 +46,11 @@ export class SignupComponent implements OnInit {
       this.userService.addUser(data).subscribe(
         (data: any) => {
           console.log(data);
-          alert("You have been successfully registered");
+          this.snackBar.open('Customer successfully added!', '✅', {
+            horizontalPosition: 'end',
+            verticalPosition: 'top',
+            duration:1500
+          });
           this.signupForm.reset();
           this.router.navigate(['login'])
         }
@@ -62,6 +58,14 @@ export class SignupComponent implements OnInit {
     }
   }
 
+  get firstname()
+  {
+    return this.signupForm.get('firstname');
+  }
+  get lastname()
+  {
+    return this.signupForm.get('lastname');
+  }
   get email() {
     return this.signupForm.get('email');
   }
