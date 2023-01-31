@@ -43,7 +43,7 @@ export class ViewCartComponent implements OnInit {
     )
   }
 
-  submitOrder(){
+  placeOrder(){
     let order:any = {
       userId:JSON.parse(localStorage.getItem('loggedUser') || "{'loggedUser':null}").id,
       date: new Date(),
