@@ -41,6 +41,7 @@ import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { ProductReviewComponent } from './product-review/product-review.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
+import { AddReviewComponent } from './add-review/add-review.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { ProductInfoComponent } from './product-info/product-info.component';
     DeleteUserComponent,
     EditProductComponent,
     ProductReviewComponent,
-    ProductInfoComponent
+    ProductInfoComponent,
+    AddReviewComponent,
   ],
   imports: [
     BrowserModule,

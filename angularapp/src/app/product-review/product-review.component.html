@@ -1,5 +1,6 @@
-<div class="card" *ngFor="let review of reviews">
-  <!-- <ngb-rating [max]="5" [(rate)]="{{review.date}}" [readonly]="false" [(ngModel)]="rating"></ngb-rating>
-  <p>{{review.date}}</p>
-  <p>{{review.review}}</p> -->
+<div class="card m-2 p-2" *ngFor="let review of reviews">
+  <p>Rating: {{review.rating}}</p>
+  <p>{{review.date | date:'fullDate'}}</p>
+ <br>
+  <p>{{review.review}}</p> 
 </div>
