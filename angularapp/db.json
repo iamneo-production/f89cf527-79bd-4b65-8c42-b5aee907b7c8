@@ -8,47 +8,30 @@
   ],
   "users": [
     {
+      "firstname": "Lindokuthle",
+      "lastname": "Mathenjwa",
       "id": 1,
       "username": "admin",
       "email": "admin@lensmart.com",
       "mobilenumber": "0715501164",
-      "password": "admin"
+      "password": "admin",
+      "role": "admin"
     },
     {
+      "firstname": "Nicolas",
+      "lastname": "Tshabalala",
       "id": 3,
       "username": "chavinco",
       "email": "tshabalala.nicolas@gmail.com",
       "mobilenumber": "082457350",
-      "password": "1234"
-    },
-    {
-      "email": "shsh@gmail.com",
-      "username": "shu",
-      "mobilenumber": "0725362546",
-      "password": "12345",
-      "confirmpassword": "12345",
-      "id": 4
-    },
-    {
-      "email": "lindo@gmail.com",
-      "username": "lindo",
-      "mobilenumber": "0657451342",
-      "password": "qwerty",
-      "confirmpassword": "qwerty",
-      "id": 5
-    },
-    {
-      "email": "admin@gmail.com",
-      "username": "admin",
-      "mobileNumber": "0662179422",
-      "password": "Admin@123",
-      "id": 100000000
+      "password": "1234",
+      "role": "customer"
     }
   ],
   "products": [
     {
       "id": 1,
-      "name": "Femina 6050",
+      "name": "Femina 605",
       "brand": "Americana",
       "price": "1250",
       "description": "Glass1 glass desc",
@@ -141,7 +124,7 @@
     {
       "userId": 3,
       "date": "2023-01-31T15:33:02.970Z",
-      "status": "pending",
+      "status": "enroute",
       "products": [
         {
           "id": 1,
@@ -163,6 +146,23 @@
         }
       ],
       "id": 1
+    },
+    {
+      "userId": 5,
+      "date": "2023-02-01T06:19:01.711Z",
+      "status": "pending",
+      "products": [
+        {
+          "id": 1,
+          "name": "Femina 6050",
+          "brand": "Americana",
+          "price": "1250",
+          "description": "Glass1 glass desc",
+          "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1481723_femina-6050_750.jpeg",
+          "quantity": 9
+        }
+      ],
+      "id": 2
     }
   ],
   "reviews": [

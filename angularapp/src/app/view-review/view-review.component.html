@@ -1,4 +1,4 @@
-<section class="vh-100" style="background-color: #658864;">
+<section class="vh-100">
   <div class="container py-5 h-100">
     <div class="card" style="border-radius: 1rem;">
       <div class="row g-0">
@@ -17,12 +17,12 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let reviews of reviews; index as i">
+                <tr *ngFor="let review of reviews; index as i">
                   <th scope="row">{{i+1}}</th>
-                  <td>{{reviews.userId}}</td>
-                  <td>{{reviews.productId}}</td>
-                  <td>{{reviews.rating}}</td>
-                  <td>{{reviews.review}}</td>
+                  <td>{{review.userId}}</td>
+                  <td>{{review.productId}}</td>
+                  <td>{{review.rating}}</td>
+                  <td>{{review.review}}</td>
                 </tr>
               </tbody>
             </table>

@@ -27,3 +27,8 @@ img{
   {
       background-color: #EEEEEE;
   }
+
+  #productHomeBody{
+    margin: auto;
+    text-align: center;
+  }

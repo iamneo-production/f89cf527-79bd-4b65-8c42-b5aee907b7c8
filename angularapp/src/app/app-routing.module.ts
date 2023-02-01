@@ -15,6 +15,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ViewCartComponent } from './view-cart/view-cart.component';
 import { ViewOrderComponent } from './view-order/view-order.component';
 import { ViewProductComponent } from './view-product/view-product.component';
+import { ViewReviewComponent } from './view-review/view-review.component';
 
 
 const routes: Routes = [
@@ -91,6 +92,11 @@ const routes: Routes = [
       {
         path:'users',
         component:DisplayUserComponent,
+        canActivate:[AuthGuardGuard, AdminGuard]
+      },
+      {
+        path:'reviews',
+        component:ViewReviewComponent,
         canActivate:[AuthGuardGuard, AdminGuard]
       }
     ]
