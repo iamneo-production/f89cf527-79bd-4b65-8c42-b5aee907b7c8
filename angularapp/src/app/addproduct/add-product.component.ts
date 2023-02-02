@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AddProductService } from '../services/Product/add-product.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-add-product',
@@ -10,14 +11,19 @@ import { AddProductService } from '../services/Product/add-product.service';
 export class AddProductComponent {
 
   products:any;
-  constructor(private addproductService:AddProductService) {
+  constructor(private addproductService:AddProductService, private snackBar:MatSnackBar) {
     this.getProducts();
    }
 
    addProduct(data:any) {
     this.addproductService.createProduct(data).subscribe((result:any)=>{
       console.log(result)
-      alert("New Product Added")
+      this.snackBar.open('Product added!', '✅', {
+        horizontalPosition: 'end',
+        verticalPosition: 'top',
+        duration:1500
+      });
+      location.reload();
     })
   }
 

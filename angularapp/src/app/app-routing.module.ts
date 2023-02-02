@@ -4,7 +4,7 @@ import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component'
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { CheckoutComponent } from './checkout/checkout.component';
-import { CustomerOrderComponent } from './customer-order/customer-order.component';
+import { CustomerOrderComponent } from './order/customer-order/customer-order.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
 import { AdminGuard } from './guards/admin.guard';
@@ -12,8 +12,8 @@ import { AuthGuardGuard } from './guards/auth-guard.guard';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { ProfileComponent } from './profile/profile.component';
-import { ViewCartComponent } from './view-cart/view-cart.component';
-import { ViewOrderComponent } from './view-order/view-order.component';
+import { ViewCartComponent } from './cart/view-cart/view-cart.component';
+import { ViewOrderComponent } from './order/view-order/view-order.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { ViewReviewComponent } from './view-review/view-review.component';
 

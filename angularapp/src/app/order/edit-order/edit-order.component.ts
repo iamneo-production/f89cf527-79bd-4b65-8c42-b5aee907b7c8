@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { EditOrderService } from '../edit-order/edit-order.service';
+import { EditOrderService } from './edit-order.service';
+import { MatSnackBar } from "@angular/material/snack-bar";
+
 @Component({
   selector: 'app-edit-order',
   templateUrl: './edit-order.component.html',

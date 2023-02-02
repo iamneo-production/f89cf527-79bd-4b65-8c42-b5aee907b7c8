@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewCartService } from './view-cart.service';
-import { Cart } from "../models/cart";
+import { Cart } from "../../models/cart";
 import { Router } from '@angular/router';
-import { AddOrderService } from '../add-order/add-order.service';
-import { DeleteCartService } from '../services/delete-cart.service';
+import { AddOrderService } from '../../add-order/add-order.service';
+import { DeleteCartService } from '../../services/delete-cart.service';
 
 
 @Component({

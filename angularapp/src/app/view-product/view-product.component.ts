@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AddProductComponent } from '../add-product/add-product.component';
+import { AddProductComponent } from '../addproduct/add-product.component';
 import { EditProductComponent } from '../edit-product/edit-product.component';
 import { ViewProductService } from '../services/view-product.service';
 

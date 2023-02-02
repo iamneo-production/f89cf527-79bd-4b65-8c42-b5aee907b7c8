@@ -18,14 +18,35 @@
       "role": "admin"
     },
     {
-      "firstname": "Nicolas",
-      "lastname": "Tshabalala",
       "id": 3,
       "username": "chavinco",
       "email": "tshabalala.nicolas@gmail.com",
-      "mobilenumber": "082457350",
-      "password": "1234",
-      "role": "customer"
+      "mobilenumber": "0896656454",
+      "password": "1234"
+    },
+    {
+      "firstname": "amahle",
+      "lastname": "zulu",
+      "email": "zulu@gmail.com",
+      "username": "mahle",
+      "mobilenumber": "0786085386",
+      "password": "12345",
+      "confirmpassword": "12345",
+      "id": 4
+    },
+    {
+      "email": "test@gmail.com",
+      "username": "Nicolas",
+      "mobileNumber": "08379992627",
+      "password": "Test@123",
+      "id": 102
+    },
+    {
+      "email": "admin@gmail.com",
+      "username": "admin",
+      "mobileNumber": "0662179422",
+      "password": "Admin@123",
+      "id": 100000000
     }
   ],
   "products": [
@@ -91,78 +112,26 @@
       "description": "Bella 7098",
       "imageURL": "https://torgaoptical.co.za/images/thumbs/1255799_bella-7098_750.jpeg",
       "quantity": 10
-    },
-    {
-      "id": 8,
-      "name": "Divine 7129",
-      "brand": "Divine",
-      "price": 2880,
-      "description": "Divine 7129",
-      "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1252105_divine-7129_750.jpeg",
-      "quantity": 10
-    },
-    {
-      "id": 9,
-      "name": "Glass 1",
-      "brand": "glaases",
-      "price": "2000.00",
-      "description": "America",
-      "imageURL": "https://www.torgaoptical.co.za/images/thumbs/0733277_americana-8029_750.jpeg",
-      "quantity": 2
-    },
-    {
-      "name": "Product 1",
-      "description": "Product one desc",
-      "price": "1400",
-      "imageURL": "https://cdn.cdnkfml.co.za/Specsavers/live/south-africa/home/shop-online-specs.png",
-      "quantity": 5,
-      "id": 10
     }
   ],
   "carts": [],
   "orders": [
     {
-      "userId": 3,
-      "date": "2023-01-31T15:33:02.970Z",
-      "status": "enroute",
+      "userId": 4,
+      "date": "2023-02-01T09:56:31.415Z",
+      "status": "delivered",
       "products": [
         {
-          "id": 1,
-          "name": "Femina 6050",
-          "brand": "Americana",
-          "price": "1250",
-          "description": "Glass1 glass desc",
-          "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1481723_femina-6050_750.jpeg",
-          "quantity": 9
-        },
-        {
-          "id": 3,
-          "name": "K-Collection 3004 Grey",
-          "brand": "K-Collection",
-          "price": 2830,
-          "description": "K-Collection 3004 Grey",
-          "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1249342_k-collection-3004.jpeg",
+          "id": 2,
+          "name": "Americana 8029",
+          "brand": "Femina",
+          "price": 2000,
+          "description": "Glass2 glass desc",
+          "imageURL": "https://www.torgaoptical.co.za/images/thumbs/0733277_americana-8029_750.jpeg",
           "quantity": 10
         }
       ],
       "id": 1
-    },
-    {
-      "userId": 5,
-      "date": "2023-02-01T06:19:01.711Z",
-      "status": "pending",
-      "products": [
-        {
-          "id": 1,
-          "name": "Femina 6050",
-          "brand": "Americana",
-          "price": "1250",
-          "description": "Glass1 glass desc",
-          "imageURL": "https://www.torgaoptical.co.za/images/thumbs/1481723_femina-6050_750.jpeg",
-          "quantity": 9
-        }
-      ],
-      "id": 2
     }
   ],
   "reviews": [

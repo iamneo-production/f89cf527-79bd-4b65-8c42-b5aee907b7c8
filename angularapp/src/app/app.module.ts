@@ -7,24 +7,24 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { SearchComponent } from './search/search.component';
 import { DisplayUserComponent } from './display-user/display-user.component';
 import { ViewProductComponent } from './view-product/view-product.component';
-import { AddProductComponent } from './add-product/add-product.component';
+import { AddProductComponent } from './addproduct/add-product.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AddOrderComponent } from './add-order/add-order.component';
-import { DeleteOrderComponent } from './delete-order/delete-order.component';
-import { ViewOrderComponent } from './view-order/view-order.component';
-import { EditOrderComponent } from './edit-order/edit-order.component';
+import { DeleteOrderComponent } from './order/delete-order/delete-order.component';
+import { ViewOrderComponent } from './order/view-order/view-order.component';
+import { EditOrderComponent } from './order/edit-order/edit-order.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { AddCartComponent } from './add-cart/add-cart.component';
-import { ViewCartComponent } from './view-cart/view-cart.component';
-import { EditCartComponent } from './edit-cart/edit-cart.component';
-import { DeleteCartComponent } from './delete-cart/delete-cart.component';
+import { ViewCartComponent } from './cart/view-cart/view-cart.component';
+import { EditCartComponent } from './cart/edit-cart/edit-cart.component';
+import { DeleteCartComponent } from './cart/delete-cart/delete-cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminhomepageComponent } from './adminhomepage/adminhomepage.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
-import { CustomerOrderComponent } from './customer-order/customer-order.component';
+import { CustomerOrderComponent } from './order/customer-order/customer-order.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -43,6 +43,9 @@ import { ProductReviewComponent } from './product-review/product-review.componen
 import { ProductInfoComponent } from './product-info/product-info.component';
 import { AddReviewComponent } from './add-review/add-review.component';
 import { ProfileComponent } from './profile/profile.component';
+import { CartComponent } from './cart/cart.component';
+import { OrderComponent } from './order/order.component';
+import { ViewComponent } from './view/view.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +78,10 @@ import { ProfileComponent } from './profile/profile.component';
     ProductReviewComponent,
     ProductInfoComponent,
     AddReviewComponent,
-    ProfileComponent
+    ProfileComponent,
+    CartComponent,
+    OrderComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,

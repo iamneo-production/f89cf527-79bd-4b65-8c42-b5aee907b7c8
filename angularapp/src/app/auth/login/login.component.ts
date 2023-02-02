@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login/login.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   loggedUser: any;
 
-  constructor(private loginService: LoginService, private router: Router) { }
+  constructor(private loginService: LoginService, private router: Router, private snackBar:MatSnackBar) { }
 
   ngOnInit(): void {
     console.log("OnInit");
@@ -57,7 +58,11 @@ export class LoginComponent implements OnInit {
 
 
           } else {
-            alert('Authentication failed')
+            this.snackBar.open('Authentication failed!', '❌', {
+              horizontalPosition: 'end',
+              verticalPosition: 'top',
+              duration:1500
+            });
           }
         }
       )

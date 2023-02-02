@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../services/user.service';
+import { MatSnackBar } from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-edit-user',
@@ -28,7 +29,8 @@ export class EditUserComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: any,
     private userService: UserService,
     private activatedRoute: ActivatedRoute,
-    private router:Router
+    private router:Router,
+    private snackBar:MatSnackBar
     ) { 
 
       
@@ -57,8 +59,12 @@ export class EditUserComponent implements OnInit {
         this.userService.editUser(data.value).subscribe(
           (data: any) => {
             console.log(data);
-            alert("User successfully updated")
-            this.router.navigate(['users'])
+            this.snackBar.open('User updated!', '✅', {
+              horizontalPosition: 'end',
+              verticalPosition: 'top',
+              duration: 1500
+            });
+            location.reload();
           });
       } else {
         alert("Invalid form, user edit failed");

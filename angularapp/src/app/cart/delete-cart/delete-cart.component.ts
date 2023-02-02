@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { DeleteCartService } from '../services/delete-cart.service';
+import { DeleteCartService } from '../../services/delete-cart.service';
 
 @Component({
   selector: 'app-delete-cart',

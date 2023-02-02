@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-delete-user',
@@ -11,7 +12,7 @@ export class DeleteUserComponent implements OnInit {
 
   @Input() user:any = {};
 
-  constructor(private userdata: UserService) { }
+  constructor(private userdata: UserService, private snackBar:MatSnackBar) { }
 
   ngOnInit(): void {
 
@@ -28,6 +29,12 @@ export class DeleteUserComponent implements OnInit {
    {
  
      console.log(result);
+     this.snackBar.open('User deleted', '✅', {
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+      duration:1500
+    });
+     location.reload()
      
    });
 
